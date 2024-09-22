@@ -1,0 +1,12 @@
+.collections img{
+    width: 270px;
+}
+
+.oldtag{
+   font-size: 13px;
+   color: red;
+   text-decoration: line-through;
+}
+.newtag{
+    font-size: 17px;  
+}
