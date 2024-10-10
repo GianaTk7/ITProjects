@@ -5,7 +5,7 @@ import p3_img from "./product_14.png";
 let product = [
     {
         id: 12,
-        name: "Striped Flutter Sleeve Overlap Collar Peplum Hem Blouse",
+        name: "Striped Flutter Sleeve Overlap",
         image: p1_img,
         new_price: 50.0,
         old_price: 80.5,
@@ -19,7 +19,7 @@ let product = [
       },
       {
         id: 14,
-        name: "Men Green Solid Zippered Full-Zip Slim Fit Bomber Jacket",
+        name: "Men Green Solid Zippered",
         image: p3_img,
         new_price: 60.0,
         old_price: 100.5,
