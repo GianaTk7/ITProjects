@@ -3,11 +3,7 @@
     margin: 0;
     box-sizing: border-box;
 }
-.items{
-width: 300px;
-height: 100px;
-border: 2px solid red;
-}
+
 .items p{
     margin: 6px 0px;
 }

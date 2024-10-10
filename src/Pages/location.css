@@ -1,0 +1,36 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.location-container {
+    padding: 20px;
+    text-align: center;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  .location-map {
+    margin: 20px 0;
+  }
+  
+  .location-details {
+    margin-top: 20px;
+  }
+  
+  .location-details h2 {
+    font-size: 2em;
+    margin-bottom: 10px;
+  }
+  
+  .location-details p {
+    font-size: 1.2em;
+    color: #555;
+  }
+  

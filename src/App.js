@@ -9,6 +9,8 @@ import Login from './Components/LogIn/Login';
 import Men from './Pages/Men';
 import Kids from './Pages/Kids';
 import Women from './Pages/Women';
+import Locations from './Pages/Locations';
+import Fqas from './Pages/Fqas';
 import Productdisplay from './Components/ProductDisplay/Productdisplay';
 import Description from './Components/DescriptionBox/Description';
 import RelatedP from './Components/RelatedProducts/RelatedP';
@@ -31,6 +33,8 @@ function App() {
             <Route path='/Productdisplay' element={<Productdisplay />} />
             <Route path='/Description' element={<Description />} />
             <Route path='/RelatedP' element={<RelatedP />} />
+            <Route path='/Locations' element={<Locations />} />
+            <Route path='/Fqas' element={<Fqas />} /> 
           </Route>
         </Routes>
       </BrowserRouter>
