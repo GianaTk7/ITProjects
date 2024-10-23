@@ -5,7 +5,7 @@ import Offer from '../Components/Offers/Offer'
 import NewCollection from '../Components/NewCollections/Newcollection'
 import Newsletter from '../Components/NewsLetters/Newsletter'
 import Tracker from '../Components/Locationstrack/Tracker'
-import Footer from '../Components/Footer/Footer'
+
 
 function Home() {
 
@@ -17,7 +17,6 @@ function Home() {
     <NewCollection/>
     <Newsletter/>
       <Tracker/>
-      <Footer/>
     </div>
   )
 }

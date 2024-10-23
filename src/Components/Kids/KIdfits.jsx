@@ -11,10 +11,11 @@ function KIdfits() {
       console.log("Clicked Productdisplay:", item);
       nav("/Productdisplay")
     }
+    
     return (
       <>
       <div className="men-section">
-        <img src="banner_women.png" alt="kids" />
+        <img src="image.png" alt="kids" />
       </div>
       <div className='collections'
         style={{
