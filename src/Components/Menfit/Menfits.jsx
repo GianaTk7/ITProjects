@@ -31,7 +31,7 @@ function Menfits() {
         }}
       >
         {products
-          .filter((re) => re.category == "men")
+          .filter((re) => re.category === "men")
           .map((item, i) => (
             <div key={i} style={{ width: "23%" }}>
               <img

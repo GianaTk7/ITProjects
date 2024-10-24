@@ -1,4 +1,3 @@
-import React, { useContext } from "react";
 import "./Cartitems.css";
 import { ShopCategoryContext } from "../contexthook/ShopCategoryContext";
 import { MdDelete } from "react-icons/md";

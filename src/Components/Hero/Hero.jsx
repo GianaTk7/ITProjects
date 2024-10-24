@@ -9,18 +9,18 @@ const Hero = () =>{
         <div>
           <div className=" hero-hand-icon">
             <p>new</p>
-            <img src="hand.svg" alt="hand" id="hand" />
+            <img src="hand.svg" alt="" id="hand" />
           </div>
           <p>Collections</p>
           <p> For Everone</p>
         </div>
         <div className="hero-button">
           <div>Lastet Collection </div>
-          <img src="arrow.png" />
+          <img src="arrow.png" alt="" />
         </div>
       </div>
       <div className="hero-right">
-        <img src="R (1).jpeg" alt="lady" id="picture" />
+        <img src="R (1).jpeg" alt="" id="picture" />
       </div>
     </div>
   );

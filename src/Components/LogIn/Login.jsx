@@ -15,6 +15,7 @@ function Login() {
       setRememberMe(true);
     }
   }, []);
+
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log("Email:", Email);
@@ -42,7 +43,10 @@ function Login() {
       }),
     })
       .then((response) => response.json())
-      .then((data) => console.log(data))
+      .then((data) => {
+        console.log(data);
+        navigate("/dashboard");
+      })
       .catch((error) => console.error("Error:", error));
   };
 
@@ -70,7 +74,8 @@ function Login() {
                 onChange={(e) => setUserEmail(e.target.value)}
                 required
               />
-              <input className="setinput"
+              <input
+                className="setinput"
                 type="password"
                 id="loginpass"
                 placeholder="UserPassword*"
