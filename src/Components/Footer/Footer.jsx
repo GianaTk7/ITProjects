@@ -12,7 +12,7 @@ function Footer() {
         <div className="contact">
           <li>Company</li>
           <p>JM</p>
-          <p>Partnership</p>
+          <p>Partnerships</p>
         </div>
 
         <div className="contact" id="storeitems">
