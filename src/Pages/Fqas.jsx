@@ -30,7 +30,7 @@ const Fqas=() =>{
         "Once your order has shipped, you will receive an email with tracking information.",
     },
     {
-      question: "What payment methods do you accept?",
+      question: "What payment methods do we allow accept?",
       answer:
         "We accept Visa, MasterCard, American Express, PayPal, and other major payment methods.",
     },
