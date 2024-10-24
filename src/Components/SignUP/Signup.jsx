@@ -38,7 +38,7 @@ function Signup() {
   return (
     <div className="main-div">
       <div className="cover-div">
-        <img src="backgroundimg.jpg" className="cover"/>
+        <img src="backgroundimg.jpg"  alt = "" className="cover"/>
       </div>
       <div className="signup-section-div">
         <div className="signup">

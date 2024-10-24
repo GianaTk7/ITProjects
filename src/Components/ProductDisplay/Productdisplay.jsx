@@ -1,7 +1,5 @@
-import React, { useContext } from "react";
 import "./Productdisplay.css";
 import { ShopCategoryContext } from "../contexthook/ShopCategoryContext";
-// import { ShopContext } from "../../Context/ShopContext";
 
 const Productdisplay = (props) => {
   const { product, cartItems, setCartItems } = ShopCategoryContext();

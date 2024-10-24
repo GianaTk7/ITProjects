@@ -1,4 +1,3 @@
-import React, { useEffect } from 'react'; 
 import './Newcollection.css';
 import new_collections from '../Assets/new_collections';
 
