@@ -3,11 +3,6 @@ import './Onstore.css';
 import data_product from '../Components/Assets/data';  
 import Items from '../Components/Items/Items'; 
 
-
-const ShoppingCart = () => {
-  alert('Cart clicked');
-};
-
 const OnStore = () => {
   useEffect(() => {
     console.log(data_product); 

@@ -2,7 +2,6 @@ import React from "react";
 import "./menfits.css";
 import { ShopCategoryContext } from "../contexthook/ShopCategoryContext";
 import { useNavigate } from "react-router-dom";
-import { VscNoNewline } from "react-icons/vsc";
 
 function Menfits() {
   const { products, setProduct } = ShopCategoryContext();
@@ -48,7 +47,7 @@ function Menfits() {
             </div>
           ))}
       </div>
-      {/* {Object.keys(product).length && <Productdisplay product={product} />} */}
+    
     </>
   );
 }
