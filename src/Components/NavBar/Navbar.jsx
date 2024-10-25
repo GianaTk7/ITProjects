@@ -43,7 +43,7 @@ const Navbar = () => {
           </ul>
         </div>
         <div className="icons-login-div">
-          <Link to="/login">
+          <Link to="/Signup">
             <button id="login-box">Login</button>
           </Link>
           <a href="https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox">
