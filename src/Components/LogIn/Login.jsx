@@ -32,7 +32,7 @@ function Login() {
       localStorage.removeItem("rememberedEmail");
     }
 
-    fetch("http://54.224.45.91:3000/login", {
+    fetch("http://54.224.45.91:8000/login", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

@@ -9,7 +9,7 @@ function Signup() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch("http://54.224.45.91:3000/signup", {
+      const response = await fetch("http://54.224.45.91:8000/signup", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
