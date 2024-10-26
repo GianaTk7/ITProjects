@@ -24,7 +24,6 @@ function Signup() {
       });
 
       const data = await response.json();
-
       if (response.ok) {
         alert("Signup Successful");
       } else {
@@ -127,5 +126,4 @@ function Signup() {
     </div>
   );
 }
-
 export default Signup;
