@@ -1,18 +1,18 @@
 // Productdisplay.js
 import "./Productdisplay.css";
 import { useContext } from "react";
-import { ShopContext } from '../../Context/ShopContext';  // Use ShopContext here
+import { ShopContext } from '../../Context/ShopContext';  
 
 const Productdisplay = () => {
   const { addToCart, products } = useContext(ShopContext);
-  const product = products[0]; // Example: Access the first product or a specific product as needed
+  const product = products[0]; 
 
   return (
     <div className="Productdisplay">
       <div className="productdisplay-left">
         <div className="Productdisplay-img-list">
           <img src={product.image} alt={product.name} />
-          {/* Additional images */}
+          
         </div>
         <div className="Productdisplay-img">
           <img src={product.image} alt={product.name} />
@@ -38,5 +38,4 @@ const Productdisplay = () => {
     </div>
   );
 };
-
 export default Productdisplay;
