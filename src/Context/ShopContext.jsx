@@ -1,45 +1,51 @@
+// ShopContext.js
 import { createContext, useState } from "react";
 import { all_products } from "../Components/Assets/all_product";
+
 export const ShopContext = createContext();
+
 const getDefaultCart = () => {
   let Cart = {};
-  for (let i = 0; i < all_products.length; i++) {
-    Cart[i] = 0;
-  }
+  all_products.forEach((product) => {
+    Cart[product.id] = 0; // Initialize each product in the cart with a quantity of 0
+  });
   return Cart;
 };
 
 export const ShopContextProvider = ({ children }) => {
-  const [products, setProducts] = useState(all_products);
-  const [product, setProduct] = useState({});
-  const [cartItems, setCartItems] = useState(getDefaultCart()); 
+  const [products] = useState(all_products);
+  const [cartItems, setCartItems] = useState(getDefaultCart());
+
+  const addToCart = (item) => {
+    setCartItems((prevCart) => ({
+      ...prevCart,
+      [item.id]: (prevCart[item.id] || 0) + 1, // Increment item count in cart
+    }));
+  };
 
   const removeFromCart = (itemId) => {
-    setCartItems((prev) => ({ ...prev, [itemId]: prev[itemId] - 1 }));
+    setCartItems((prevCart) => ({
+      ...prevCart,
+      [itemId]: Math.max((prevCart[itemId] || 1) - 1, 0), // Decrement item count, with a minimum of 0
+    }));
   };
 
   const getTotalAmount = () => {
-    let totalAmount = 0;
-    for (const item in cartItems) {
-      if (cartItems[item] > 0) {
-        let itemInfo = all_products.find((product) => product.id === Number(item));
-        totalAmount += itemInfo.new_price * cartItems[item];
-      }
-    }
-    return totalAmount;
+    return Object.entries(cartItems).reduce((total, [itemId, quantity]) => {
+      const item = products.find((product) => product.id === Number(itemId));
+      return total + item.new_price * quantity;
+    }, 0);
   };
 
   return (
     <ShopContext.Provider
       value={{
         products,
-        setProducts,
-        product,
-        setProduct,
         cartItems,
         setCartItems,
+        addToCart,
         removeFromCart,
-        getTotalAmount, 
+        getTotalAmount,
       }}
     >
       {children}

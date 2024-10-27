@@ -1,14 +1,17 @@
 import "./Cartitems.css";
 import { useContext } from "react";
-import { ShopCategoryContext } from "../contexthook/ShopCategoryContext";
+import { ShopContext } from '../../Context/ShopContext';
 import { MdDelete } from "react-icons/md";
 
 const Cartitems = () => {
-  const { cartItems, setCartItems } = useContext(ShopCategoryContext);
+  const { products, cartItems, setCartItems, removeFromCart, getTotalAmount } = useContext(ShopContext);
 
-  const removeFromCart = (item) => {
-    const updatedList = cartItems.filter((e) => e.id !== item.id);
-    setCartItems(updatedList);
+  const handleRemoveFromCart = (itemId) => {
+    if (cartItems[itemId] > 1) {
+      setCartItems((prev) => ({ ...prev, [itemId]: prev[itemId] - 1 }));
+    } else {
+      removeFromCart(itemId);
+    }
   };
 
   return (
@@ -23,23 +26,28 @@ const Cartitems = () => {
       </div>
       <hr />
 
-      {cartItems && cartItems.map((item) => (
-        <div key={item.id} className="cartitems-format cartitems-format-main">
-          <img src={item.image} alt={item.name} className="cart-product-icon" />
-          <p>{item.name}</p>
-          <p>${item.old_price}</p>
-          <p>{item.quantity}</p>
-          <p>${item.new_price * item.quantity}</p>
-          <MdDelete onClick={() => removeFromCart(item)} />
-        </div>
-      ))}
+      {Object.keys(cartItems)  // Use Object.keys to get an array of item IDs
+        .filter((itemId) => cartItems[itemId] > 0)
+        .map((itemId) => {
+          const item = products.find((product) => product.id === Number(itemId));
+          return (
+            <div key={itemId} className="cartitems-format cartitems-format-main">
+              <img src={item.image} alt={item.name} className="cart-product-icon" />
+              <p>{item.name}</p>
+              <p>${item.old_price}</p>
+              <p>{cartItems[itemId]}</p>
+              <p>${item.new_price * cartItems[itemId]}</p>
+              <MdDelete onClick={() => handleRemoveFromCart(item.id)} />
+            </div>
+          );
+        })}
 
       <div className="cartitems-down">
         <div className="cartitems-total">
           <h1>Cart Totals</h1>
           <div className="Cartitems-total-item">
             <p>Subtotal</p>
-            <p>${cartItems.reduce((acc, item) => acc + item.new_price * item.quantity, 0)}</p>
+            <p>${getTotalAmount()}</p>
           </div>
           <hr />
           <div className="Cartitems-total-item">
@@ -49,12 +57,12 @@ const Cartitems = () => {
           <hr />
           <div className="Cartitems-total-item">
             <h3>Total</h3>
-            <h3>${cartItems.reduce((acc, item) => acc + item.new_price * item.quantity, 0)}</h3>
+            <h3>${getTotalAmount()}</h3>
           </div>
         </div>
         <button className="proceed">PROCEED TO CHECKOUT</button>
       </div>
-      
+
       <div className="cartitems-promocode">
         <p>If you have a promo code, enter it here</p>
         <div className="cartitems-promobox">
