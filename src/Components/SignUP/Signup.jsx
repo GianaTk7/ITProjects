@@ -33,7 +33,6 @@ function Signup() {
       alert(`Signup failed: ${error.message}`);
     }
   };
-
   return (
     <div className="main-div">
       <div className="cover-div">

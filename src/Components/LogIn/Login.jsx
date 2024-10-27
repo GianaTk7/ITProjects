@@ -15,7 +15,6 @@ function Login() {
       setRememberMe(true);
     }
   }, []);
-
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log("Email:", Email);
@@ -25,7 +24,6 @@ function Login() {
       alert("Please fill in both fields");
       return;
     }
-
     if (rememberMe) {
       localStorage.setItem("rememberedEmail", Email);
     } else {
