@@ -8,6 +8,7 @@ function Signup() {
   const [confirmPassword, setUserConfirmPassword] = useState("");
   const handleSubmit = async (e) => {
     e.preventDefault();
+
     try {
       const response = await fetch("http://3.94.6.186:8000/signup", {
         method: "POST",
@@ -22,7 +23,6 @@ function Signup() {
           confirm: confirmPassword,
         }),
       });
-
       const data = await response.json();
       if (response.ok) {
         alert("Signup Successful");
@@ -98,7 +98,9 @@ function Signup() {
                 <label htmlFor="username" className="nametag">
                   Confirm Password:
                 </label>
+                
                 <br />
+
                 <input
                   type="Confirmpassword"
                   className="details"
@@ -113,10 +115,12 @@ function Signup() {
                 <br />
               </form>
             </div>
+
             <div className="box">
               <a class="login" href="login">
                 Login Here
               </a>
+
               <h1 className="text">Already have an account?</h1>
             </div>
           </div>
@@ -125,4 +129,5 @@ function Signup() {
     </div>
   );
 }
+
 export default Signup;
