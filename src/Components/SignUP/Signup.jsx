@@ -98,7 +98,7 @@ function Signup() {
                 <label htmlFor="username" className="nametag">
                   Confirm Password:
                 </label>
-                
+
                 <br />
 
                 <input

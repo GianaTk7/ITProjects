@@ -40,13 +40,13 @@ function Login() {
         Password: Password,
       }),
     })
-      .then((response) => response.json())
-      .then((data) => {
-        console.log(data);
-        navigate("/dashboard");
-      })
-      .catch((error) => console.error("Error:", error));
-  };
+    .then((response) => response.json())
+    .then((data) => {
+      console.log(data);
+      navigate("/dashboard");
+    })
+    .catch((error) => console.error("Error:", error));
+};
 
   return (
     <div className="container">
@@ -61,7 +61,6 @@ function Login() {
               <img src="person.svg" alt="logoic" id="person-icon" />
             </div>
           </div>
-
           <div className="login-div">
             <form onSubmit={handleSubmit}>
               <input
@@ -81,7 +80,7 @@ function Login() {
                 onChange={(e) => setUserPassword(e.target.value)}
                 required
               />
-              <br />
+              <br/>
               <div className="handerback" id="buttonContainer">
                 <button type="submit" className="submit" id="handInButton">
                   Hand in
@@ -104,6 +103,7 @@ function Login() {
       </div>
     </div>
   );
+
 }
 
 export default Login;
