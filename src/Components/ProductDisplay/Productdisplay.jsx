@@ -1,4 +1,4 @@
-// Productdisplay.js
+
 import "./Productdisplay.css";
 import { useContext } from "react";
 import { ShopContext } from '../../Context/ShopContext';  
