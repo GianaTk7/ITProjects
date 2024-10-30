@@ -5,7 +5,7 @@ const Offer = () => {
     <div className="Offers">
       <div className="offers-left">
         <h1>Exclusive</h1>
-        <h1>Offers For You</h1>
+        <h2>Offers For You</h2>
         <p>ONLY ON BEST SELLING PRODUCTS</p>
         <a
           href="https://www.sweatybetty.com/?msclkid=41f38e343ec31560fdc3e8db8190aa1e&utm_

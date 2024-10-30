@@ -1,3 +1,4 @@
+/* Adjust global styles */
 * {
     padding: 0;
     margin: 0;
@@ -6,7 +7,7 @@
 
 .hero {
     height: 100vh;
-    background: linear-gradient(180deg, #fde1ff, #e1ffea22 60%);
+    background: linear-gradient(180deg, #fde1ff);
     display: flex;
 }
 
@@ -18,47 +19,79 @@
     gap: 20px;
     padding-left: 180px;
     line-height: 1.1;
+    animation: slide-in 5.5s ease forwards ;
+    animation-delay: 0.5s
+
 }
-#offersavailable{
+
+#offersavailable {
     color: red;
 }
+
 #hand {
-    width: 100px; 
-    height: 100px; 
-  }
-  
-  #hand:hover {
+    width: 100px;
+    height: 100px;
+}
+
+#hand:hover {
     animation: spin 1s linear infinite;
-    background-color: #656565;
-  }
-  
-  @keyframes spin {
+   
+}
+
+@keyframes spin {
     from {
-      transform: rotate(0deg);
+        transform: rotate(0deg);
     }
     to {
-      transform: rotate(360deg);
+        transform: rotate(360deg);
     }
-  }
-.hero-left h2{
+}
+
+/* Sliding text animation with slower duration */
+@keyframes slide-in {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.hero-left h2,
+.hero-left p,
+.hero-hand-icon img,
+.hero-button {
+    animation: slide-in 5.5s ease-out forwards;
+    animation-delay: 2.5s
+}
+
+.hero-left h2 {
     color: #090909;
     font-size: 26px;
     font-weight: 600;
+    animation-delay: 2s
 }
-.hero-left p{
+
+.hero-left p {
     color: #171717;
     font-size: 80px;
     font-weight: 700;
+    animation-delay: 2s
 }
-.hero-hand-icon{
+
+.hero-hand-icon {
     display: flex;
     align-items: center;
     gap: 20px;
 }
-.hero-hand-icon img{
+
+.hero-hand-icon img {
     width: 105px;
 }
-.hero-button{
+
+.hero-button {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -71,12 +104,20 @@
     color: white;
     font-size: 18px;
     font-weight: 400;
+    animation-delay: 2s
 }
-.hero-right{
-     flex: 1;
-     display: flex;
-     align-items: center;
-     justify-content: center;
+
+.hero-right {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.advert-videos{
+    width: 80%;
+    height: 80%;
+  
 }
       
 #picture {

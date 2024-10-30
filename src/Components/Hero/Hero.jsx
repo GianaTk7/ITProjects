@@ -20,7 +20,9 @@ const Hero = () =>{
         </div>
       </div>
       <div className="hero-right">
-        <img src="R (1).jpeg" alt="" id="picture" />
+        <div className="advert-videos">
+        <img src="Gia.jpg" alt="" id="picture" />
+        </div>
       </div>
     </div>
   );

@@ -15,38 +15,41 @@ function Login() {
       setRememberMe(true);
     }
   }, []);
+
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log("Email:", Email);
-    console.log("Password:", Password);
 
     if (Email === "" || Password === "") {
       alert("Please fill in both fields");
       return;
     }
+
     if (rememberMe) {
       localStorage.setItem("rememberedEmail", Email);
     } else {
       localStorage.removeItem("rememberedEmail");
     }
 
-    fetch("http://98.83.7.174:8000/login", {
+    fetch("http://localhost:8000/login", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        Email: Email,
-        Password: Password,
+        email: Email,         
+        password: Password,
       }),
     })
-    .then((response) => response.json())
-    .then((data) => {
-      console.log(data);
-      navigate("/dashboard");
-    })
-    .catch((error) => console.error("Error:", error));
-};
+      .then((response) => response.json())
+      .then((data) => {
+        if (data.success) {   
+          navigate("/");
+        } else {
+          alert("Login failed: " + (data.message || "Invalid credentials"));
+        }
+      })
+      .catch((error) => console.error("Error:", error));
+  };
 
   return (
     <div className="container">
@@ -103,7 +106,6 @@ function Login() {
       </div>
     </div>
   );
-
 }
 
 export default Login;

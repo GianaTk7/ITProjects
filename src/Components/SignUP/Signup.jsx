@@ -10,7 +10,7 @@ function Signup() {
     e.preventDefault();
 
     try {
-      const response = await fetch("http://98.83.7.174:8000/signup", {
+      const response = await fetch("http://localhost:8000/signup", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
