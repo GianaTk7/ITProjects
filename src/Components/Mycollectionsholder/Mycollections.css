@@ -5,13 +5,11 @@
 }
 .Mycollectionsss {
     width: 100%; 
-    border: 2px solid red;
     margin-top: 70px;
 }
 .colle{
  width: 70%;
  height: 410px;
- border: 2px solid black;
 margin: auto;
 display: flex;
 justify-content: space-between
@@ -19,14 +17,12 @@ justify-content: space-between
 .my-fits{
     width: 200px;
     height: 340px;
-    border: 2px solid blue;
     border-radius: 5%;
     box-shadow: 10px 10px 5px rgb(228, 235, 238);
 }
 .my-images{
     width: 200px;
     height: 280px;
-    border: 2px solid black;
     gap: 40px;
 }
 .img1{
@@ -36,3 +32,43 @@ justify-content: space-between
 width: 100%;
 height: 250px;
 }
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .modal-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 600px;
+    width: 90%;
+    text-align: center;
+    position: relative;
+  }
+  
+  .modal-image {
+    width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+  }
+  
+  .close-button {
+    margin-top: 10px;
+    padding: 5px 10px;
+    border: none;
+    background-color: #333;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+  
