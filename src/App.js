@@ -14,7 +14,9 @@ import Fqas from './Pages/Fqas';
 import Productdisplay from './Components/ProductDisplay/Productdisplay';
 import Description from './Components/DescriptionBox/Description';
 import RelatedP from './Components/RelatedProducts/RelatedP';
-
+import Mycollections from './Components/Mycollectionsholder/Mycollections'
+import Trackdelivery from './Components/TrackDelivery/Trackdelivery'
+import Checkout from './Components/Checkout/Checkout'
 function App() {
   return (
     <div>
@@ -30,11 +32,14 @@ function App() {
             <Route path='/Men' element={<Men />} />
             <Route path='/Women' element={<Women />} />
             <Route path='/Kids' element={<Kids />} />
+            <Route path = '/Mycollections' element = {<Mycollections/>}/>
             <Route path='/Productdisplay' element={<Productdisplay />} />
             <Route path='/Description' element={<Description />} />
             <Route path='/RelatedP' element={<RelatedP />} />
+           <Route path='/Trackdelivery' element={<Trackdelivery/>}/>
             <Route path='/Locations' element={<Locations />} />
             <Route path='/Fqas' element={<Fqas />} /> 
+            <Route path='/Checkout' element={<Checkout />} /> 
           </Route>
         </Routes>
       </BrowserRouter>

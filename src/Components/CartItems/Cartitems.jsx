@@ -2,9 +2,19 @@ import "./Cartitems.css";
 import { useContext } from "react";
 import { ShopContext } from '../../Context/ShopContext';
 import { MdDelete } from "react-icons/md";
+import { useNavigate } from "react-router-dom";
 
 const Cartitems = () => {
   const { products, cartItems, setCartItems, removeFromCart, getTotalAmount } = useContext(ShopContext);
+  const navigate = useNavigate();
+
+  const addToCart = (itemId) => {
+    setCartItems((prev) => ({ ...prev, [itemId]: (prev[itemId] || 0) + 1 }));
+  };
+
+  const handleCheckout = () => {
+    navigate('/Checkout');
+  };
 
   const handleRemoveFromCart = (itemId) => {
     if (cartItems[itemId] > 1) {
@@ -26,7 +36,7 @@ const Cartitems = () => {
       </div>
       <hr />
 
-      {Object.keys(cartItems)  // Use Object.keys to get an array of item IDs
+      {Object.keys(cartItems)
         .filter((itemId) => cartItems[itemId] > 0)
         .map((itemId) => {
           const item = products.find((product) => product.id === Number(itemId));
@@ -38,6 +48,7 @@ const Cartitems = () => {
               <p>{cartItems[itemId]}</p>
               <p>${item.new_price * cartItems[itemId]}</p>
               <MdDelete onClick={() => handleRemoveFromCart(item.id)} />
+              <button onClick={() => addToCart(item.id)}>Add More</button>
             </div>
           );
         })}
@@ -60,7 +71,10 @@ const Cartitems = () => {
             <h3>${getTotalAmount()}</h3>
           </div>
         </div>
-        <button className="proceed">PROCEED TO CHECKOUT</button>
+     
+        <form className="checkout-form" onSubmit={handleCheckout}>
+  <button type="submit" className="proceed">PROCEED TO CHECKOUT</button>
+</form>
       </div>
 
       <div className="cartitems-promocode">
@@ -73,5 +87,4 @@ const Cartitems = () => {
     </div>
   );
 };
-
 export default Cartitems;

@@ -8,9 +8,13 @@ const OnStore = () => {
     console.log(data_product); 
   }, []);
 
+
+  const handleImageClick = () => {
+    alert("Signup to make your first Order!!");
+  };
   return (
     <div className='Store'>
-      <h1 id='text'>Elevate Your Wardrobel</h1>
+      <h1 id='text'>Elevate Your Wardrobe!</h1>
       <hr />
       <div className="Store-items-pictures">
         {data_product.map((item) => (
@@ -21,6 +25,7 @@ const OnStore = () => {
             image={item.image}
             new_price={`$${item.new_price}`}  
             old_price={`$${item.old_price}`} 
+            onImageClick={handleImageClick} p
           />
         ))}
       </div>

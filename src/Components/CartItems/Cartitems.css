@@ -27,7 +27,7 @@
 .cartitems-total {
     flex: 1;
     display: flex;
-    margin: 200px;
+    margin: 100px;
     flex-direction: column;
     gap: 40px;
 }

@@ -1,5 +1,6 @@
 import React from "react";
 import "./Hero.css";
+import { Link } from "react-router-dom";
 
 const Hero = () =>{
   return (
@@ -12,16 +13,18 @@ const Hero = () =>{
             <img src="hand.svg" alt="" id="hand" />
           </div>
           <p>Collections</p>
-          <p> For Everone</p>
+          <p> For Everyone</p>
         </div>
         <div className="hero-button">
-          <div>Lastet Collection </div>
+        <Link to="/Mycollections">
+      <button>Latest Collection</button>
+    </Link>
           <img src="arrow.png" alt="" />
         </div>
       </div>
       <div className="hero-right">
         <div className="advert-videos">
-        <img src="Gia.jpg" alt="" id="picture" />
+        <img src="Gia.jpg" alt="" id="picture"/>
         </div>
       </div>
     </div>
