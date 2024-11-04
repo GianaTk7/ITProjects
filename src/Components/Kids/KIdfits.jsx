@@ -45,7 +45,7 @@ function KIdfits() {
             </div>
           ))}
       </div>
-      {/* {Object.keys(product).length && <Productdisplay product={product} />} */}
+  
     </>
     )
 }

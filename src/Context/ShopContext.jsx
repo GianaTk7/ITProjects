@@ -5,14 +5,11 @@ export const ShopContext = createContext();
 
 export const ShopContextProvider = ({ children }) => {
   const [products] = useState(all_products);
-  const [cartItems, setCartItems] = useState({});
+  const [cartItems, setCartItems] = useState([]);
   const [selectedProduct, setProduct] = useState(null); // New state for selected product
 
   const addToCart = (item) => {
-    setCartItems((prevCart) => ({
-      ...prevCart,
-      [item.id]: (prevCart[item.id] || 0) + 1,
-    }));
+    setCartItems([...cartItems, item]);
   };
 
   const removeFromCart = (itemId) => {
@@ -23,10 +20,12 @@ export const ShopContextProvider = ({ children }) => {
   };
 
   const getTotalAmount = () => {
-    return Object.entries(cartItems).reduce((total, [itemId, quantity]) => {
-      const item = products.find((product) => product.id === Number(itemId));
-      return total + item.new_price * quantity;
-    }, 0);
+    let num = 0
+    for (let i = 0; i < cartItems.length; i++) {
+      let obj = cartItems[i]
+      num += obj.new_price
+    }
+    return num
   };
 
   return (
@@ -38,8 +37,8 @@ export const ShopContextProvider = ({ children }) => {
         addToCart,
         removeFromCart,
         getTotalAmount,
-        setProduct,        
-        selectedProduct,    
+        setProduct,
+        selectedProduct,
       }}
     >
       {children}

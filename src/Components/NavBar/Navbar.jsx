@@ -6,7 +6,7 @@ import "./Navbar.css";
 const Navbar = () => {
   const [menu, setMenu] = useState("Home");
   const { cartItems } = ShopCategoryContext(); // Use the correct context hook
-
+  console.log("cartItemscartItemscartItems", cartItems)
   return (
     <div className="main-container">
       <div className="navbar-div">

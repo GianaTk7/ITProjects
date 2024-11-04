@@ -5,7 +5,7 @@ import { MdDelete } from "react-icons/md";
 import { useNavigate } from "react-router-dom";
 
 const Cartitems = () => {
-  const { products, cartItems, setCartItems, removeFromCart, getTotalAmount } = useContext(ShopContext);
+  const {  cartItems, setCartItems, removeFromCart, getTotalAmount } = useContext(ShopContext);
   const navigate = useNavigate();
 
   const addToCart = (itemId) => {
@@ -36,17 +36,12 @@ const Cartitems = () => {
       </div>
       <hr />
 
-      {Object.keys(cartItems)
-        .filter((itemId) => cartItems[itemId] > 0)
-        .map((itemId) => {
-          const item = products.find((product) => product.id === Number(itemId));
+      {cartItems.map((item) => {
           return (
-            <div key={itemId} className="cartitems-format cartitems-format-main">
+            <div key={item.id} className="cartitems-format cartitems-format-main">
               <img src={item.image} alt={item.name} className="cart-product-icon" />
               <p>{item.name}</p>
               <p>${item.old_price}</p>
-              <p>{cartItems[itemId]}</p>
-              <p>${item.new_price * cartItems[itemId]}</p>
               <MdDelete onClick={() => handleRemoveFromCart(item.id)} />
               <button onClick={() => addToCart(item.id)}>Add More</button>
             </div>
