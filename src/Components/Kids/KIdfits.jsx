@@ -22,7 +22,7 @@ function KIdfits() {
           marginTop: "60px",
           height: "100%",
           border: "none",
-          fontSize: "12px",
+          fontSize: "7px",
           display: "flex",
           justifyContent: "space-between",
           flexWrap: "wrap",

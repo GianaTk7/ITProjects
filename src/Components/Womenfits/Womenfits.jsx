@@ -12,39 +12,41 @@ function Womenfits() {
   };
   return (
     <>
-      <div className="men-section">
-        <img src="banner_women.png" alt="women" />
+     <div className="men-section">
+  <img src="banner_women.png" alt="women" />
+</div>
+<div
+  className="collections"
+  id="ladies"
+  style={{
+    marginTop: "60px",
+    height: "100%",
+    border: "none",
+    fontSize: "7px",
+    display: "flex",
+    justifyContent: "space-between",
+    flexWrap: "wrap",
+    gap: "30px",
+  }}
+>
+  {products
+    .filter((re) => re.category === "women")
+    .map((item, i) => (
+      <div key={i} style={{ width: "23%" }}>
+        <img
+          id={`product-img-${i}`} 
+          src={item.image}
+          onClick={() => handleProductClick(item)}
+          alt={item.name}
+        />
+        <h1>{item.name}</h1>
+        <p className="newtag">${item.new_price}</p>
+        <p className="oldtag">${item.old_price}</p>
       </div>
-      <div
-        className="collections"
-        style={{
-          marginTop: "60px",
-          height: "100%",
-          border: "none",
-          fontSize: "12px",
-          display: "flex",
-          justifyContent: "space-between",
-          flexWrap: "wrap",
-          gap: "30px",
-        }}
-      >
-        {products
-          .filter((re) => re.category === "women")
-          .map((item, i) => (
-            <div key={i} style={{ width: "23%" }}>
-              <img
-                src={item.image}
-                onClick={() => handleProductClick(item)} // Pass the item
-                alt=""
-                gap="440px"
-              />
-              <h1>{item.name}</h1>
-              <p className="newtag">${item.new_price}</p>
-              <p className="oldtag">${item.old_price}</p>
-            </div>
-          ))}
-      </div>
-      {/* {Object.keys(product).length && <Productdisplay product={product} />} */}
+    ))}
+</div>
+
+  
     </>
   );
 }

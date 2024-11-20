@@ -42,8 +42,9 @@ const Cartitems = () => {
               <img src={item.image} alt={item.name} className="cart-product-icon" />
               <p>{item.name}</p>
               <p>${item.old_price}</p>
+              {/* <p>+1</p> */}
               <MdDelete onClick={() => handleRemoveFromCart(item.id)} />
-              <button onClick={() => addToCart(item.id)}>Add More</button>
+              {/* <button onClick={() => addToCart(item.id)}>Add More</button> */}
             </div>
           );
         })}
@@ -76,7 +77,9 @@ const Cartitems = () => {
         <p>If you have a promo code, enter it here</p>
         <div className="cartitems-promobox">
           <input type="text" placeholder="Promo Code" />
-          <button>Submit</button>
+         
+          <a href="https://www.mypromocodes.co.za">Submit</a>
+      
         </div>
       </div>
     </div>

@@ -5,7 +5,7 @@ import "./Navbar.css";
 
 const Navbar = () => {
   const [menu, setMenu] = useState("Home");
-  const { cartItems } = ShopCategoryContext(); // Use the correct context hook
+  const { cartItems } = ShopCategoryContext(); 
   console.log("cartItemscartItemscartItems", cartItems)
   return (
     <div className="main-container">
@@ -43,8 +43,8 @@ const Navbar = () => {
           </ul>
         </div>
         <div className="icons-login-div">
-          <Link to="/Signup">
-            <button id="login-box">Login</button>
+          <Link to="/Locations">
+            <img className="icon" src="locationperson.svg" alt="loc" />
           </Link>
           <a href="https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox">
             <img
@@ -57,8 +57,8 @@ const Navbar = () => {
             <img className="icon" src="shopping.svg" alt="Shopping Cart" />
           </Link>
           <div className="nav-shopping-count">{cartItems.length}</div>
-          <Link to="/Locations">
-            <img className="icon" src="locationperson.svg" alt="loc" />
+          <Link to="/Signup">
+            <button id="login-box">Login</button>
           </Link>
         </div>
       </div>

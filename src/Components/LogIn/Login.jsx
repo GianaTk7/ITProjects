@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import "./Login.css";
-
+import './Login.css'
 function Login() {
   const [Email, setUserEmail] = useState("");
   const [Password, setUserPassword] = useState("");
@@ -36,73 +35,84 @@ function Login() {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        email: Email,         
+        email: Email,
         password: Password,
       }),
     })
       .then((response) => response.json())
       .then((data) => {
-        if (data.success) {   
+        if (data.success) {
           navigate("/");
+          localStorage.setItem("user", JSON.stringify(data.user)); 
+          alert("Login successful! Welcome " + data.user.name);
         } else {
           alert("Login failed: " + (data.message || "Invalid credentials"));
         }
+        alert('User')
       })
       .catch((error) => console.error("Error:", error));
   };
 
+  const loginPageStyle = {
+    width: "100%",
+    height: "100vh",
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    backgroundImage: "url('/backgroundimg.jpg')",
+    backgroundSize: "cover",
+    backgroundPosition: "center",
+  };
+
+  const loginBoxStyle = {
+    width: "350px", 
+    height: "450px", 
+    padding: "30px",
+    backgroundColor: "rgba(0, 0, 0, 0.85)", 
+    borderRadius: "12px",
+    boxShadow: "0 8px 20px rgba(0, 0, 0, 0.5)", 
+    color: "#fff",
+    textAlign: "center",
+  };
+
   return (
-    <div className="container">
-      <div className="side-img-div">
-        <img src="store.jpg" alt="stcover" className="setcover" />
-      </div>
-      <div className="signIn">
-        <div className="login-container">
-          <div>
-            <h1 className="heardertxt">Welcome to JM</h1>
-            <div className="person-icon-div">
-              <img src="person.svg" alt="logoic" id="person-icon" />
-            </div>
-          </div>
-          <div className="login-div">
-            <form onSubmit={handleSubmit}>
-              <input
-                type="email"
-                id="loginemail"
-                placeholder="Useremail*"
-                value={Email}
-                onChange={(e) => setUserEmail(e.target.value)}
-                required
-              />
-              <input
-                className="setinput"
-                type="password"
-                id="loginpass"
-                placeholder="UserPassword*"
-                value={Password}
-                onChange={(e) => setUserPassword(e.target.value)}
-                required
-              />
-              <br/>
-              <div className="handerback" id="buttonContainer">
-                <button type="submit" className="submit" id="handInButton">
-                  Hand in
-                </button>
-                <br />
-                <button id="signUpButton">Sign up</button>
-              </div>
-              <div className="remember-me">
-                <input
-                  type="checkbox"
-                  id="rememberMe"
-                  checked={rememberMe}
-                  onChange={(e) => setRememberMe(e.target.checked)}
-                />
-                <label htmlFor="rememberMe">Remember me</label>
-              </div>
-            </form>
-          </div>
+    <div style={loginPageStyle}>
+      <div style={loginBoxStyle}>
+        <div className="icon-circle">
+          <img src="person.svg" alt="User Icon" className="user-icon" />
         </div>
+        <h2>Login Here</h2>
+        <form onSubmit={handleSubmit}>
+          <input
+            type="email"
+            placeholder="Enter Username"
+            value={Email}
+            onChange={(e) => setUserEmail(e.target.value)}
+            required
+          />
+          <input
+            type="password"
+            placeholder="Enter Password"
+            value={Password}
+            onChange={(e) => setUserPassword(e.target.value)}
+            required
+          />
+          <button type="submit" className="login-btn">Login</button>
+         
+          <div className="remember-me">
+            <input
+              type="checkbox"
+              id="rememberMe"
+              checked={rememberMe}
+              onChange={(e) => setRememberMe(e.target.checked)}
+            />
+            <label htmlFor="rememberMe">Remember Me</label>
+          </div>
+          <p className="forgot-password">Lost your password?</p>
+          <p className="signup-link">
+            Don't have an account? <a href="signup">Sign up</a>
+          </p>
+        </form>
       </div>
     </div>
   );

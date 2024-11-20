@@ -19,11 +19,11 @@ const Hero = () =>{
         <Link to="/Mycollections">
       <button>Latest Collection</button>
     </Link>
-          <img src="arrow.png" alt="" />
+          <img src="arrow.png" alt="arrow" />
         </div>
       </div>
       <div className="hero-right">
-        <div className="advert-videos">
+        <div className="picture-div">
         <img src="Gia.jpg" alt="" id="picture"/>
         </div>
       </div>

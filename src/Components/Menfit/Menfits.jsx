@@ -22,7 +22,7 @@ function Menfits() {
           marginTop: "60px",
           height: "100%",
           border: "none",
-          fontSize: "10px",
+          fontSize: "7px",
           display: "flex",
           justifyContent: "space-between",
           flexWrap: "wrap",
