@@ -5,12 +5,12 @@ import { MdDelete } from "react-icons/md";
 import { useNavigate } from "react-router-dom";
 
 const Cartitems = () => {
-  const {  cartItems, setCartItems, removeFromCart, getTotalAmount } = useContext(ShopContext);
+  const {cartItems, setCartItems, removeFromCart, getTotalAmount } = useContext(ShopContext);
   const navigate = useNavigate();
 
-  const addToCart = (itemId) => {
-    setCartItems((prev) => ({ ...prev, [itemId]: (prev[itemId] || 0) + 1 }));
-  };
+  // const addToCart = (itemId) => {
+  //   setCartItems((prev) => ({ ...prev, [itemId]: (prev[itemId] || 0) + 1 }));
+  // };
 
   const handleCheckout = () => {
     navigate('/Checkout');

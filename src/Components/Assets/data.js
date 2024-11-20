@@ -1,7 +1,9 @@
 import p1_img from './product_1.png';
 import p2_img from './product_2.png';
 import p3_img from './product_3.png';
-import p4_img from './product_4.png';
+// import p4_img from './product_4.png';
+import p54_img from './p54_img.webp'
+
 
 let data_product = [
   {
@@ -34,7 +36,7 @@ let data_product = [
   {
     id: 4,
     name: "Flutter Sleeve",
-    image: p4_img,
+    image: p54_img,
     new_price: 100.00,
     old_price: 150.00,
     size: ["S", "M", "L"], 
