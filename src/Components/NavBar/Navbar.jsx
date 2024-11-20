@@ -12,7 +12,7 @@ const Navbar = () => {
       <div className="navbar-div">
         <div className="logo-div">
           <img src="logo_big.png" id="bag" alt="Logo" />
-          <h1 id="header">JM Store</h1>
+          <h1 id="header">JM Storeee</h1>
         </div>
         <div className="nav-menu-div">
           <ul className="nav-menu">
