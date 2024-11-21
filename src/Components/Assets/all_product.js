@@ -1,36 +1,37 @@
+import p48_img from "./p48_img.webp";
+import p55_img from "./p55_img.webp";
+import p7_img from './p7_img.webp';
+import p8_img from "./p8_img.webp";
+import p9_img from "./p9_img.webp";
+import p10_img from "./p10_img.webp";
+import p11_img from "./p11_img.webp";
+import p12_img from "./p12_img.webp";
 
-import p5_img from "./product_5.png";
-import p6_img from "./product_6.png";
-import p7_img from "./product_7.png";
-import p8_img from "./product_8.png";
-import p9_img from "./product_9.png";
-import p10_img from "./product_10.png";
-import p11_img from "./product_11.png";
-import p12_img from "./product_12.png";
-import p13_img from "./product_13.png";
-import p14_img from "./product_14.png";
-import p15_img from "./product_15.png";
-import p16_img from "./product_16.png";
-import p17_img from "./product_17.png";
-import p18_img from "./product_18.png";
-import p23_img from "./product_23.png";
-import p24_img from "./product_24.png";
-import p27_img from "./product_27.png";
-import p28_img from "./product_28.png";
-import p29_img from "./product_29.png";
-import p30_img from "./product_30.png";
-import p31_img from "./product_31.png";
-import p32_img from "./product_32.png";
-import p33_img from "./product_33.png";
-import p34_img from "./product_34.png";
+import p13_img from './p13_img.webp'
+import p14_img from  './p14_img.webp'
+import p15_img from './p15_img.webp';
+import p16_img from './p16_img.jpg'
+import p17_img from './p17_img.webp'
+import p18_img from "./p18_img.webp";
+import p19_img from "./p19_img.webp";
+
+import p20_img from './p20_img.webp'
+import p21_img from './p21_img.webp'
+import p22_img from './p22_img.webp'
+import p23_img from './p23_img.webp'
+import p26_img from './p26_img.webp'
+import p27_img from './p27_img.webp'
+import p28_img from './p28_img.webp'
+import p29_img from './p29_img.webp'
+
 
 let all_product = [
 
   {
     id: 5,
-    name: "Striped Flutter Sleeve Overlap Collar Peplum Hem Blouse",
+    name: "Stripm Hem Blouse",
     category: "women",
-    image: p5_img,
+    image: p48_img,
     new_price: 79.70,
     old_price: 100.5,
     colors: ["#FF4500", "#000", "#5F9EA0"], 
@@ -38,9 +39,9 @@ let all_product = [
   },
   {
     id: 6,
-    name: "Striped Flutter Sleeve Overlap Collar Peplum Hem Blouse",
+    name: "swag jersey",
     category: "women",
-    image: p6_img,
+    image: p55_img,
     new_price: 85.0,
     old_price: 120.5,
     colors: ["#FF4500", "#8A2BE2", "#5F9EA0"],
@@ -48,7 +49,7 @@ let all_product = [
   },
   {
     id: 7,
-    name: "Striped Flutter Sleeve Overlap Collar Peplum Hem Blouse",
+    name: "Striped Flutter Peplum Hem Blouse",
     category: "women",
     image: p7_img,
     new_price: 110.08,
@@ -78,7 +79,7 @@ let all_product = [
   },
   {
     id: 10,
-    name: "Striped Flutter Sleeve Overlap Collar Peplum Hem Blouse",
+    name: "Striped Flutter Blouse",
     category: "women",
     image: p10_img,
     new_price: 75.00,
@@ -106,9 +107,12 @@ let all_product = [
     colors: ["#FFD700", "#FF6347", "#4682B4"],
     sizes: ["S", "M", "L", "XL"]
   },
+
+//men section below
+
   {
     id: 13,
-    name: "Men Green Solid Zippered Full-Zip Slim Fit Bomber Jacket",
+    name: "Men Green Soli Jacket",
     category: "men",
     image: p13_img,
     new_price: 90.30,
@@ -118,7 +122,7 @@ let all_product = [
   },
   {
     id: 14,
-    name: "Men Green Solid Zippered Full-Zip Slim Fit Bomber Jacket",
+    name: "Men Green Solid ber Jacket",
     category: "men",
     image: p14_img,
     new_price: 85.0,
@@ -138,7 +142,7 @@ let all_product = [
   },
   {
     id: 16,
-    name: "Men Green Solid Zippered Full-Zip Slim Fit Bomber Jacket",
+    name: "Men Green Solid ",
     category: "men",
     image: p16_img,
     new_price: 85.0,
@@ -148,7 +152,7 @@ let all_product = [
   },
   {
     id: 17,
-    name: "Men Green Solid Zippered Full-Zip Slim Fit Bomber Jacket",
+    name: "Men Green Solid Zippered ",
     category: "men",
     image: p17_img,
     new_price: 85.0,
@@ -158,7 +162,7 @@ let all_product = [
   },
   {
     id: 18,
-    name: "Men Green Solid Zippered Full-Zip Slim Fit Bomber Jacket",
+    name: "Men Green Solid ",
     category: "men",
     image: p18_img,
     new_price: 85.0,
@@ -169,7 +173,7 @@ let all_product = [
  
   {
     id: 23,
-    name: "Men Green Solid Zippered Full-Zip Slim Fit Bomber Jacket",
+    name: "Men Green SolidJacket",
     category: "men",
     image: p23_img,
     new_price: 85.0,
@@ -177,21 +181,21 @@ let all_product = [
   },
   {
     id: 24,
-    name: "Men Green Solid Zippered Full-Zip Slim Fit Bomber Jacket",
+    name: "Men Green Solimber Jacket",
     category: "men",
-    image: p24_img,
+    image: p19_img,
     new_price: 85.0,
     old_price: 120.5,
     colors: ["#FFD700", "#FF6347", "#4682B4"], // gold, tomato, steel blue
     sizes: ["S", "M", "L", "XL"]
   },
-  
-    
+
+  //kids section below
   {
     id: 27,
-    name: "Boys Orange Colourblocked Hooded Sweatshirt",
+    name: "Boys Orange Colourblocked ",
     category: "kid",
-    image: p27_img,
+    image: p21_img,
     new_price: 85.0,
     old_price: 120.5,
     colors: ["#FFD700", "#FF6347", "#4682B4"], // gold, tomato, steel blue
@@ -199,9 +203,9 @@ let all_product = [
   },
   {
     id: 28,
-    name: "Boys Orange Colourblocked Hooded Sweatshirt",
+    name: "nice cloths",
     category: "kid",
-    image: p28_img,
+    image: p20_img,
     new_price: 85.0,
     old_price: 120.5,
     colors: ["#FFD700", "#FF6347", "#4682B4"], // gold, tomato, steel blue
@@ -209,9 +213,9 @@ let all_product = [
   },
   {
     id: 29,
-    name: "Boys Orange Colourblocked Hooded Sweatshirt",
+    name: "nice yeeee",
     category: "kid",
-    image: p29_img,
+    image: p22_img,
     new_price: 85.0,
     old_price: 120.5,
     colors: ["#FFD700", "#FF6347", "#4682B4"], // gold, tomato, steel blue
@@ -219,9 +223,9 @@ let all_product = [
   },
   {
     id: 30,
-    name: "Boys Orange Colourblocked Hooded Sweatshirt",
+    name: "baggy",
     category: "kid",
-    image: p30_img,
+    image: p23_img,
     new_price: 85.0,
     old_price: 120.5,
     colors: ["#FFD700", "#FF6347", "#4682B4"], // gold, tomato, steel blue
@@ -231,7 +235,7 @@ let all_product = [
     id: 31,
     name: "Boys Orange Colourblocked Hooded Sweatshirt",
     category: "kid",
-    image: p31_img,
+    image: p26_img,
     new_price: 85.0,
     old_price: 120.5,
     colors: ["#FFD700", "#FF6347", "#4682B4"], // gold, tomato, steel blue
@@ -241,7 +245,7 @@ let all_product = [
     id: 32,
     name: "Boys Orange Colourblocked Hooded Sweatshirt",
     category: "kid",
-    image: p32_img,
+    image: p27_img,
     new_price: 85.0,
     old_price: 120.5,
     colors: ["#FFD700", "#FF6347", "#4682B4"], // gold, tomato, steel blue
@@ -251,7 +255,7 @@ let all_product = [
     id: 33,
     name: "Boys Orange Colourblocked Hooded Sweatshirt",
     category: "kid",
-    image: p33_img,
+    image: p28_img,
     new_price: 85.0,
     old_price: 120.5,
     colors: ["#FFD700", "#ffffff", "#000000"], // gold, tomato, steel blue
@@ -261,7 +265,7 @@ let all_product = [
     id: 34,
     name: "Boys Orange Colourblocked Hooded Sweatshirt",
     category: "kid",
-    image: p34_img,
+    image: p29_img,
     new_price: 85.0,
     old_price: 120.5,
     colors: ["#FFD700", "#FF6347", "#4682B4"], // gold, tomato, steel blue

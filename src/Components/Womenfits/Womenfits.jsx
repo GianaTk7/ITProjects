@@ -13,7 +13,8 @@ function Womenfits() {
   return (
     <>
      <div className="men-section">
-  <video src="dresses.mp4" autoPlay/>
+     <video src="/dresses.mp4" autoPlay muted />
+
 </div>
 <div
   className="collections"

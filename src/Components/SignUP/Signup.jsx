@@ -1,16 +1,27 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./Signup.css";
+
 function Signup() {
   const [name, setUsername] = useState("");
-  const [Email, setUserEmail] = useState("");
-  const [Age, setUserAge] = useState("");
-  const [Password, setUserPassword] = useState("");
+  const [email, setUserEmail] = useState("");
+  const [age, setUserAge] = useState("");
+  const [password, setUserPassword] = useState("");
   const [confirmPassword, setUserConfirmPassword] = useState("");
-  const nagivate = useNavigate()
-  
+  const navigate = useNavigate();
+
   const handleSubmit = async (e) => {
     e.preventDefault();
+
+    // Basic client-side validation
+    if (!name || !email || !age || !password || !confirmPassword) {
+      alert("Please fill in all fields.");
+      return;
+    }
+    if (password !== confirmPassword) {
+      alert("Passwords do not match.");
+      return;
+    }
 
     try {
       const response = await fetch("http://localhost:8000/signup", {
@@ -20,16 +31,17 @@ function Signup() {
         },
         body: JSON.stringify({
           name,
-          email: Email,
-          age: Age,
-          password: Password,
+          email,
+          age,
+          password,
           confirm: confirmPassword,
         }),
       });
+
       const data = await response.json();
       if (response.ok) {
         alert("Signup Successful");
-        nagivate("/")
+        navigate("/");
       } else {
         alert(`Signup failed: ${data.message}`);
       }
@@ -37,96 +49,98 @@ function Signup() {
       alert(`Signup failed: ${error.message}`);
     }
   };
+
   return (
     <div className="main-div">
       <div className="cover-div">
-        <img src="backgroundimg.jpg"  alt = "" className="cover"/>
+        <img src="backgroundimg.jpg" alt="Background" className="cover" />
       </div>
-      <div className="signup-section-div">
-        <div className="signup">
-          <div className="signup-div">
-            <h1 id="heading">
-              Sign <span id="txt"> Up </span>
-            </h1>
-            <hr id="line"></hr>
-            <div className="form">
-              <form onSubmit={handleSubmit}>
-                <label htmlFor="username" className="nametag">
-                  Name:
-                </label>
-                <br />
-                <input
-                  type="text"
-                  className="details"
-                  placeholder="Username*"
-                  value={name}
-                  onChange={(e) => setUsername(e.target.value)}
-                />
-                <br />
-                <label htmlFor="useremail" className="nametag">
-                  Email:
-                </label>
-                <br />
-                <input
-                  type="email"
-                  className="details"
-                  placeholder="Useremail*"
-                  value={Email}
-                  onChange={(e) => setUserEmail(e.target.value)}
-                />
-                <br />
-                <label htmlFor="userage" className="nametag">
-                  Age:
-                </label>
-                <br />
-                <input
-                  type="text"
-                  className="details"
-                  placeholder="UserAge*"
-                  value={Age}
-                  onChange={(e) => setUserAge(e.target.value)}
-                />
-                <br />
-                <label htmlFor="userpassword" className="nametag">
-                  Password:
-                </label>
-                <br />
-                <input
-                  type="password"
-                  className="details"
-                  placeholder="UserPassword*"
-                  value={Password}
-                  onChange={(e) => setUserPassword(e.target.value)}
-                />
-                <br />
-                <label htmlFor="username" className="nametag">
-                  Confirm Password:
-                </label>
-
-                <br />
-
-                <input
-                  type="Confirmpassword"
-                  className="details"
-                  placeholder="ConfirmPassword*"
-                  value={confirmPassword}
-                  onChange={(e) => setUserConfirmPassword(e.target.value)}
-                />
-                <br />
-                <button type="submit" id="sub">
-                  Submit
-                </button>
-                <br />
-              </form>
-            </div>
-
-            <div className="box">
-              <a class="login" href="login">
-                Login Here
-              </a>
-              <h1 className="text">Already have an account?</h1>
-            </div>
+      <div className="signup-container">
+        <h1 className="heading">
+          Sign <span className="highlight">Up</span>
+        </h1>
+        <hr className="line" />
+        <form onSubmit={handleSubmit} className="form">
+          <div className="form-group">
+            <label htmlFor="username" className="label">
+              Name:
+            </label>
+            <input
+              type="text"
+              id="username"
+              className="input"
+              placeholder="Username*"
+              value={name}
+              onChange={(e) => setUsername(e.target.value)}
+            />
           </div>
+
+          <div className="form-group">
+            <label htmlFor="email" className="label">
+              Email:
+            </label>
+            <input
+              type="email"
+              id="email"
+              className="input"
+              placeholder="Email*"
+              value={email}
+              onChange={(e) => setUserEmail(e.target.value)}
+            />
+          </div>
+
+          <div className="form-group">
+            <label htmlFor="age" className="label">
+              Age:
+            </label>
+            <input
+              type="number"
+              id="age"
+              className="input"
+              placeholder="Age*"
+              value={age}
+              onChange={(e) => setUserAge(e.target.value)}
+            />
+          </div>
+
+          <div className="form-group">
+            <label htmlFor="password" className="label">
+              Password:
+            </label>
+            <input
+              type="password"
+              id="password"
+              className="input"
+              placeholder="Password*"
+              value={password}
+              onChange={(e) => setUserPassword(e.target.value)}
+            />
+          </div>
+
+          <div className="form-group">
+            <label htmlFor="confirmPassword" className="label">
+              Confirm Password:
+            </label>
+            <input
+              type="password"
+              id="confirmPassword"
+              className="input"
+              placeholder="Confirm Password*"
+              value={confirmPassword}
+              onChange={(e) => setUserConfirmPassword(e.target.value)}
+            />
+          </div>
+
+          <button type="submit" className="submit-btn">
+            Submit
+          </button>
+        </form>
+
+        <div className="redirect-container">
+          <p className="redirect-text">Already have an account?</p>
+          <a href="/login" className="redirect-link">
+            Login Here
+          </a>
         </div>
       </div>
     </div>

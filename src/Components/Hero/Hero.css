@@ -9,6 +9,7 @@
     height: 100vh;
     background: linear-gradient(180deg, #fde1ff);
     display: flex;
+   z-index: 1000;
 }
 
 .hero-left {
@@ -137,18 +138,16 @@ transform: scale(1.05);
     display: flex;
     align-items: center;
     justify-content: center;
-     border-radius: 75px;
+     /* border-radius: 75px; */
 }
 .picture-div {
     width: 80%;
-    height: 87%;
     box-shadow: 0 -10px 50px rgba(0, 0, 0, 0.2); 
-
+    border-radius: 10px; 
 }
-      
+
 #picture {
-    height: 87vh;
-    width: 100%;
-    background: #e1ffea22;
-    box-shadow: 0 -10px 50px #fff; 
+    width: 80%;
+    height: auto; 
+    display: block; 
 }

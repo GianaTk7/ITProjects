@@ -1,17 +1,18 @@
-import p1_img from "./product_12.png";
-import p2_img from "./product_35.png";
-import p3_img from "./product_14.png";
-import p4_img from "./product_8.png";
-import p5_img from "./product_15.png";
-import p6_img from "./product_2.png";
-import p7_img from "./product_17.png";
-import p8_img from "./product_28.png";
+import p60_img from './p60_img.webp'
+import p61_img from './p61_img.jpg'
+import p62_img from "./p62_img.webp";
+import p63_img from "./p63_img.webp";
+import p64_img from "./p64_img.webp";
+import p65_img from './p65_img.webp'
+
+import p66_img from "./p66_img.webp";
+import p67_img from "./p67_img.webp";
 
 let new_collections = [
   {
     id: 12,
-    name: "Striped Flutter Sleeve Overlap Collar Peplum Hem Blouse",
-    image: p1_img,
+    name: "Striped Flutter",
+    image: p60_img,
     new_price: 50.0,
     old_price: 80.5,
     size: ["S", "M", "L"], // Example sizes
@@ -20,16 +21,16 @@ let new_collections = [
   {
     id: 35,
     name: "Boys Orange Colourblocked Hooded Sweatshirt",
-    image: p2_img,
+    image: p61_img,
     new_price: 85.0,
     old_price: 120.5,
-    size: ["M", "L", "XL"], // Example sizes
-    color: ["Orange", "Black", "Grey"], // Example colors
+    size: ["M", "L", "XL"], 
+    color: ["Orange", "Black", "Grey"], 
   },
   {
     id: 14,
-    name: "Men Green Solid Zippered Full-Zip Slim Fit Bomber Jacket",
-    image: p3_img,
+    name: "Men Green Solid Jacket",
+    image: p62_img,
     new_price: 60.0,
     old_price: 100.5,
     size: ["S", "M", "L"], // Example sizes
@@ -37,8 +38,8 @@ let new_collections = [
   },
   {
     id: 8,
-    name: "Striped Flutter Sleeve Overlap Collar Peplum Hem Blouse",
-    image: p4_img,
+    name: "Striped Flutter Sleeve ",
+    image: p63_img,
     new_price: 100.0,
     old_price: 150.0,
     size: ["S", "M", "L"], // Example sizes
@@ -46,8 +47,8 @@ let new_collections = [
   },
   {
     id: 15,
-    name: "Men Green Solid Zippered Full-Zip Slim Fit Bomber Jacket",
-    image: p5_img,
+    name: "Men Green Solid ",
+    image: p64_img,
     new_price: 50.0,
     old_price: 80.5,
     size: ["M", "L", "XL"], // Example sizes
@@ -55,8 +56,8 @@ let new_collections = [
   },
   {
     id: 2,
-    name: "Striped Flutter Sleeve Overlap Collar Peplum Hem Blouse",
-    image: p6_img,
+    name: "Striped Flutter Blouse",
+    image: p65_img,
     new_price: 85.0,
     old_price: 120.5,
     size: ["S", "M", "L"], 
@@ -64,8 +65,8 @@ let new_collections = [
   },
   {
     id: 17,
-    name: "Men Green Solid Zippered Full-Zip Slim Fit Bomber Jacket",
-    image: p7_img,
+    name: "Men Green Solid t",
+    image: p66_img,
     new_price: 60.0,
     old_price: 100.5,
     size: ["M", "L", "XL"], 
@@ -73,8 +74,8 @@ let new_collections = [
   },
   {
     id: 28,
-    name: "Boys Orange Colourblocked Hooded Sweatshirt",
-    image: p8_img,
+    name: "Boys Orange ",
+    image: p67_img,
     new_price: 100.0,
     old_price: 150.0,
     size: ["S", "M", "L"], 

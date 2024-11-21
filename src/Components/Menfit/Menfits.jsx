@@ -15,7 +15,7 @@ function Menfits() {
   return (
     <>
       <div>
-        <img src="banner_mens.png" alt="" />
+       <video src="/manbanner.mp4" autoplay muted width="100%" height="450" />
       </div>
       <div className="collections"
         style={{
@@ -26,7 +26,7 @@ function Menfits() {
           display: "flex",
           justifyContent: "space-between",
           flexWrap: "wrap",
-          gap: "30px",
+          gap: "15px",
         }}
       >
         {products

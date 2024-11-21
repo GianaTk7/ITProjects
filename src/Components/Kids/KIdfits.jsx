@@ -15,7 +15,7 @@ function KIdfits() {
     return (
       <>
       <div className="men-section">
-        <img src="image.png" alt="kids" />
+        <img src="kidsbanner.jpg" alt="kids" id='kidsbanner' />
       </div>
       <div className='collections'
         style={{

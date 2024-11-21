@@ -1,46 +1,33 @@
-import p1_img from './product_1.png';
-import p2_img from './product_2.png';
-import p3_img from './product_3.png';
-// import p4_img from './product_4.png';
-import p54_img from './p54_img.webp'
+import p5_img from './p5_img.webp'
+import p4_img from './p4_img.webp'
+import p51_img from './p51_img.webp';
+import p77_img from './p77_img.jpg';
 
 
 let data_product = [
   {
     id: 1,
     name: "Collar Peplum Hem Blouse",
-    image: p1_img,
-    new_price: 50.00,
-    old_price: 80.50,
-    size: ["S", "M", "L"], 
-    color: ["Red", "Blue", "Black"], 
+    image: p5_img,
+   
   },
   {
     id: 2,
-    name: "Body Fit Short Sleeve",
-    image: p2_img,
-    new_price: 85.00,
-    old_price: 120.50,
-    size: ["M", "L", "XL"], 
-    color: ["White", "Grey", "Navy"], 
+    name: "men cool short",
+    image: p4_img,
+ 
   },
   {
     id: 3,
     name: "Vest",
-    image: p3_img,
-    new_price: 60.00,
-    old_price: 100.50,
-    size: ["S", "M", "L"], 
-    color: ["Black", "Brown"], 
+    image: p51_img,
+
   },
   {
     id: 4,
-    name: "Flutter Sleeve",
-    image: p54_img,
-    new_price: 100.00,
-    old_price: 150.00,
-    size: ["S", "M", "L"], 
-    color: ["Pink", "Cream"], }
+    name: "baby dress with a  red bow ",
+    image: p77_img,
+    }
 ];
 
 export default data_product;
