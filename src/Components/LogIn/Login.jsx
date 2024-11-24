@@ -52,9 +52,8 @@ function Login() {
       })
       .catch((error) => console.error("Error:", error));
   };
-
   const loginPageStyle = {
-    width: "100%",
+    width: "1350px",
     height: "100vh",
     display: "flex",
     justifyContent: "center",
@@ -62,7 +61,9 @@ function Login() {
     backgroundImage: "url('/backgroundimg.jpg')",
     backgroundSize: "cover",
     backgroundPosition: "center",
+    backgroundRepeat: "no-repeat", // Ensures no tiling
   };
+  
 
   const loginBoxStyle = {
     width: "350px", 

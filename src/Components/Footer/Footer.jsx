@@ -10,7 +10,6 @@ function Footer() {
             Don't Miss <span id="out">Out</span>
           </h1>
           <p>"Style that speaks, quality that lasts."</p>
-
           <div className="form-div">
             <form>
               <input

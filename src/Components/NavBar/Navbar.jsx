@@ -5,8 +5,18 @@ import "./Navbar.css";
 
 const Navbar = () => {
   const [menu, setMenu] = useState("Home");
-  const { cartItems } = ShopCategoryContext(); 
-  console.log("cartItemscartItemscartItems", cartItems)
+  const [userName, setUserName] = useState(null); // Store the user's name
+  const { cartItems } = ShopCategoryContext();
+
+  // Helper function to get initials
+  const getInitials = (name) => {
+    if (!name) return "";
+    const nameParts = name.split(" ");
+    return nameParts.map((part) => part[0].toUpperCase()).join("");
+  };
+
+  const userInitials = getInitials(userName);
+
   return (
     <div className="main-container">
       <div className="navbar-div">
@@ -20,14 +30,20 @@ const Navbar = () => {
               <Link style={{ textDecoration: "none" }} to="/">
                 Home
               </Link>
+
               {menu === "Home" ? <hr /> : null}
             </li>
-            <li onClick={() => setMenu("Men")}>
+
+            <li
+              id={menu === "Men" ? "highlight" : ""}
+              onClick={() => setMenu("Men")}
+            >
               <Link style={{ textDecoration: "none" }} to="/Men">
                 Men
               </Link>
               {menu === "Men" ? <hr /> : null}
             </li>
+
             <li onClick={() => setMenu("Women")}>
               <Link style={{ textDecoration: "none" }} to="/Women">
                 Women
@@ -57,9 +73,14 @@ const Navbar = () => {
             <img className="icon" src="shopping.svg" alt="Shopping Cart" />
           </Link>
           <div className="nav-shopping-count">{cartItems.length}</div>
-          <Link to="/Signup">
-            <button id="login-box">Login</button>
-          </Link>
+
+          {userName ? (
+            <div className="user-initials">{userInitials}</div>
+          ) : (
+            <Link to="/Signup">
+              <button id="login-box">Login</button>
+            </Link>
+          )}
         </div>
       </div>
     </div>

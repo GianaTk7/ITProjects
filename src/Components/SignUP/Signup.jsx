@@ -69,7 +69,7 @@ function Signup() {
               type="text"
               id="username"
               className="input"
-              placeholder="Username*"
+              placeholder="Name*"
               value={name}
               onChange={(e) => setUsername(e.target.value)}
             />

@@ -71,6 +71,16 @@
   cursor: pointer;
 }
 
+#highlight {
+  position: relative; 
+  z-index: 10; 
+  background-color: #f0f0f0; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+  transform: scale(1.1);
+  transition: all 0.3s ease-in-out; 
+}
+
+
 .nav-menu hr {
   border: none;
   width: 80%;
@@ -168,4 +178,20 @@
   margin-left: 10px;
   width: 80px;
   height: 30px;
+}
+
+.user-initials {
+  background-color: #007bff; /* Example color */
+  color: white;
+  font-weight: bold;
+  padding: 0.5rem;
+  border-radius: 50%;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  margin-left: 1rem;
+  font-size: 1.2rem;
+  text-transform: uppercase;
 }

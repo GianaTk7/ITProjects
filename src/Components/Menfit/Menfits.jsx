@@ -15,7 +15,8 @@ function Menfits() {
   return (
     <>
       <div>
-       <video src="/manbanner.mp4" autoplay muted width="100%" height="450" />
+      <video src="manbanner.mp4" className="manbanner" autoplay muted ></video>
+
       </div>
       <div className="collections"
         style={{

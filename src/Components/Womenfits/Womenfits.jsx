@@ -14,7 +14,6 @@ function Womenfits() {
     <>
      <div className="men-section">
      <video src="/dresses.mp4" autoPlay muted />
-
 </div>
 <div
   className="collections"
