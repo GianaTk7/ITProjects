@@ -16,6 +16,7 @@ import Description from './Components/DescriptionBox/Description';
 import RelatedP from './Components/RelatedProducts/RelatedP';
 import Mycollections from './Components/Mycollectionsholder/Mycollections'
 import Trackdelivery from './Components/TrackDelivery/Trackdelivery'
+import Letters from './Components/Letters/Letters'
 import Checkout from './Components/Checkout/Checkout'
 function App() {
   return (
@@ -39,6 +40,7 @@ function App() {
            <Route path='/Trackdelivery' element={<Trackdelivery/>}/>
             <Route path='/Locations' element={<Locations />} />
             <Route path='/Fqas' element={<Fqas />} /> 
+            <Route path='/Letters' element = {<Letters/>}/>
             <Route path='/Checkout' element={<Checkout />} /> 
           </Route>
         </Routes>

@@ -9,18 +9,41 @@
 }
 .collections img{
     width: 270px;
-    /* padding-left: 40px; */
+ 
 }
 
-.oldtag{
-   font-size: 13px;
-   color: red;
-   text-decoration: line-through;
+.nametag {
+    font-size: 18px;
+    margin-bottom: 10px; 
 }
-.newtag{
-    font-size: 17px;  
+
+.oldtag {
+    font-size: 15px;
+    color: red;
+    text-decoration: line-through;
+    margin-bottom: 5px;
 }
-.manbanner{
+
+.newtag {
+    color: blue;
+    font-size: 18px;
+    margin-bottom: 5px; 
+}
+
+.star {
+    font-size: 20px;
+    color: #FFD700;
+}
+
+.rating {
+    display: flex;
+    gap: 5px;
+    justify-content: flex-start;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+.manbanner video{
     width: 95% ;
     margin: auto;
     height:  400px;

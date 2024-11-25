@@ -8,10 +8,6 @@ const Cartitems = () => {
   const {cartItems, setCartItems, removeFromCart, getTotalAmount } = useContext(ShopContext);
   const navigate = useNavigate();
 
-  // const addToCart = (itemId) => {
-  //   setCartItems((prev) => ({ ...prev, [itemId]: (prev[itemId] || 0) + 1 }));
-  // };
-
   const handleCheckout = () => {
     navigate('/Checkout');
   };
@@ -27,12 +23,11 @@ const Cartitems = () => {
   return (
     <div className="Cartitems">
       <div className="cartitems-format-main">
-        <p>Products</p>
+        <p className="product">Products</p>
         <p>Title</p>
-        <p>Price</p>
+        <p id="price">Price</p>
         <p>Quantity</p>
-        <p>Total</p>
-        <p>Remove</p>
+        <p className="product">Remove</p>
       </div>
       <hr />
 
@@ -85,4 +80,4 @@ const Cartitems = () => {
     </div>
   );
 };
-export default Cartitems;
+export default Cartitems;

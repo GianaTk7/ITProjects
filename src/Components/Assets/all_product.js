@@ -29,47 +29,51 @@ let all_product = [
 
   {
     id: 5,
-    name: "Stripm Hem Blouse",
+    name: "old drip bluey jeans",
     category: "women",
     image: p48_img,
     new_price: 79.70,
     old_price: 100.5,
     colors: ["#FF4500", "#000", "#5F9EA0"], 
-    sizes: ["S", "M", "L"]
+    sizes: ["S", "M", "L"],
+    stars: 4 // Add stars for rating
   },
   {
     id: 6,
-    name: "swag jersey",
+    name: "square brownie croptop",
     category: "women",
     image: p55_img,
     new_price: 85.0,
     old_price: 120.5,
     colors: ["#FF4500", "#8A2BE2", "#5F9EA0"],
-    sizes: ["S", "M", "L"]
+    sizes: ["S", "M", "L"],
+    stars: 5
   },
   {
     id: 7,
-    name: "Striped Flutter Peplum Hem Blouse",
+    name: "swag baggy jeans",
     category: "women",
     image: p7_img,
     new_price: 110.08,
     old_price: 160.5,
     colors: ["#FF4500", "#8A2BE2", "#5F9EA0"], 
-    sizes: ["S", "M", "L"]
+    sizes: ["S", "M", "L"],
+    stars: 4.5
   },
   {
     id: 8,
-    name: "Striped Flutter Sleeve Overlap Collar Peplum Hem Blouse",
+    name: "tromadance art sheet",
     category: "women",
     image: p8_img,
     new_price: 65.0,
     old_price: 96.5,
     colors: ["#FF69B4", "#CD5C5C", "#FFD700"], 
-    sizes: ["XS", "S", "M", "L", "XL"]
+    sizes: ["XS", "S", "M", "L", "XL"],
+    stars: 3.5
   },
   {
     id: 9,
-    name: "Striped Flutter Sleeve Overlap Collar Peplum Hem Blouse",
+    name: "Brenda Sequin Gown",
     category: "women",
     image: p9_img,
     new_price: 80.60,
@@ -79,7 +83,7 @@ let all_product = [
   },
   {
     id: 10,
-    name: "Striped Flutter Blouse",
+    name: "Alora Sequin Maxi Gown",
     category: "women",
     image: p10_img,
     new_price: 75.00,
@@ -89,7 +93,7 @@ let all_product = [
   },
   {
     id: 11,
-    name: "Striped Flutter Sleeve Overlap Collar Peplum Hem Blouse",
+    name: "Maya Embellished Mini Dress - Black",
     category: "women",
     image: p11_img,
     new_price: 55.00,
@@ -99,7 +103,7 @@ let all_product = [
   },
   {
     id: 12,
-    name: "Striped Flutter Sleeve Overlap Collar Peplum Hem Blouse",
+    name: "Sophisticated Touch Sculpt Midi Dress - Hunter",
     category: "women",
     image: p12_img,
     new_price: 100.40,
@@ -112,80 +116,80 @@ let all_product = [
 
   {
     id: 13,
-    name: "Men Green Soli Jacket",
+    name: "Leave Me Textured Knit Shirt - White",
     category: "men",
     image: p13_img,
     new_price: 90.30,
-    old_price: 140.5,
+    old_price: 120.5,
     colors: ["#FFD700", "#FF6347", "#4682B4"], 
     sizes: ["S", "M", "L", "XL"]
   },
   {
     id: 14,
-    name: "Men Green Solid ber Jacket",
+    name: "Family Goals King Hoodie - Black",
     category: "men",
     image: p14_img,
     new_price: 85.0,
-    old_price: 120.5,
+    old_price: 100.5,
     colors: ["#FFD700", "#FF6347", "#4682B4"], 
     sizes: ["S", "M", "L", "XL"]
   },
   {
     id: 15,
-    name: "Men Green Solid Zippered Full-Zip Slim Fit Bomber Jacket",
+    name: "men skinny jeans-black",
     category: "men",
     image: p15_img,
-    new_price: 85.0,
-    old_price: 120.5,
+    new_price: 90.50,
+    old_price: 105.5,
     colors: ["#FFD700", "#FF6347", "#4682B4"], 
     sizes: ["S", "M", "L", "XL"]
   },
   {
     id: 16,
-    name: "Men Green Solid ",
+    name: "Tyson tracksuit - Gray ",
     category: "men",
     image: p16_img,
-    new_price: 85.0,
-    old_price: 120.5,
+    new_price: 265.90,
+    old_price: 300.5,
     colors: ["#FFD700", "#FF6347", "#4682B4"], 
     sizes: ["S", "M", "L", "XL"]
   },
   {
     id: 17,
-    name: "Men Green Solid Zippered ",
+    name: "Desto Slim Flare Cargo Pants - Black",
     category: "men",
     image: p17_img,
-    new_price: 85.0,
-    old_price: 120.5,
+    new_price: 185.88,
+    old_price: 200.5,
     colors: ["#FFD700", "#fff", "#4682B4"], 
     sizes: ["S", "M", "L", "XL"]
   },
   {
     id: 18,
-    name: "Men Green Solid ",
+    name: "Muhammad Ali Rumble Short Sleeve Tee - Black",
     category: "men",
     image: p18_img,
-    new_price: 85.0,
-    old_price: 120.5,
+    new_price: 120.50,
+    old_price: 180.5,
     colors: ["#FFD700", "#FF6347", "#4682B4"], // gold, tomato, steel blue
     sizes: ["S", "M", "L", "XL"]
   },
  
   {
     id: 23,
-    name: "Men Green SolidJacket",
+    name: "Rookster short sleeve-black",
     category: "men",
     image: p23_img,
-    new_price: 85.0,
-    old_price: 120.5,
+    new_price: 60.99,
+    old_price: 80.5,
   },
   {
     id: 24,
-    name: "Men Green Solimber Jacket",
+    name: "Sayward Flannel Shirt - Tan/Multi",
     category: "men",
     image: p19_img,
-    new_price: 85.0,
-    old_price: 120.5,
+    new_price: 90.5,
+    old_price: 100.0,
     colors: ["#FFD700", "#FF6347", "#4682B4"], // gold, tomato, steel blue
     sizes: ["S", "M", "L", "XL"]
   },
@@ -193,7 +197,7 @@ let all_product = [
   //kids section below
   {
     id: 27,
-    name: "Boys Orange Colourblocked ",
+    name: "Mini Money Gang T-Shirt - Sand",
     category: "kid",
     image: p21_img,
     new_price: 85.0,
@@ -203,7 +207,7 @@ let all_product = [
   },
   {
     id: 28,
-    name: "nice cloths",
+    name: "Mini Lily High Rise Cargo Jeans - pink Wash",
     category: "kid",
     image: p20_img,
     new_price: 85.0,
@@ -213,7 +217,7 @@ let all_product = [
   },
   {
     id: 29,
-    name: "nice yeeee",
+    name: "Mini Brianca Bow Wide Leg Jeans - Light Wash",
     category: "kid",
     image: p22_img,
     new_price: 85.0,
@@ -223,51 +227,51 @@ let all_product = [
   },
   {
     id: 30,
-    name: "baggy",
+    name: "Mini King Von Legend Tee - Black",
     category: "kid",
     image: p23_img,
-    new_price: 85.0,
-    old_price: 120.5,
+    new_price: 78.80,
+    old_price: 90.5,
     colors: ["#FFD700", "#FF6347", "#4682B4"], // gold, tomato, steel blue
     sizes: ["S", "M", "L", "XL"]
   },
   {
     id: 31,
-    name: "Boys Orange Colourblocked Hooded Sweatshirt",
+    name: "Mini Stare At the Stars Fuzzy Knit Sweater - Cream",
     category: "kid",
     image: p26_img,
-    new_price: 85.0,
-    old_price: 120.5,
+    new_price: 46.80,
+    old_price: 60.5,
     colors: ["#FFD700", "#FF6347", "#4682B4"], // gold, tomato, steel blue
     sizes: ["S", "M", "L", "XL"]
   },
   {
     id: 32,
-    name: "Boys Orange Colourblocked Hooded Sweatshirt",
+    name: "Mini Rack On Racks Fleece Pullover Hoodie - Black",
     category: "kid",
     image: p27_img,
-    new_price: 85.0,
-    old_price: 120.5,
+    new_price: 195.99,
+    old_price: 340.50,
     colors: ["#FFD700", "#FF6347", "#4682B4"], // gold, tomato, steel blue
     sizes: ["S", "M", "L", "XL"]
   },
   {
     id: 33,
-    name: "Boys Orange Colourblocked Hooded Sweatshirt",
+    name: "Mini Von Dutch Bomber Jacket - Black/White",
     category: "kid",
     image: p28_img,
-    new_price: 85.0,
-    old_price: 120.5,
+    new_price: 320.80,
+    old_price: 400.70,
     colors: ["#FFD700", "#ffffff", "#000000"], // gold, tomato, steel blue
     sizes: ["S", "M", "L", "XL"]
   },
   {
     id: 34,
-    name: "Boys Orange Colourblocked Hooded Sweatshirt",
+    name: "Mini Beast Mode Print T-Shirt - Brown",
     category: "kid",
     image: p29_img,
-    new_price: 85.0,
-    old_price: 120.5,
+    new_price: 189.90,
+    old_price: 270.59,
     colors: ["#FFD700", "#FF6347", "#4682B4"], // gold, tomato, steel blue
     sizes: ["S", "M", "L", "XL"]
   },

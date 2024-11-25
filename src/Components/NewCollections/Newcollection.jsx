@@ -5,9 +5,7 @@ const Item = ({ id, name, image, new_price, old_price }) => {
   return (
     <div className="collection-item" id={id}>
       <img src={image} alt={name} />
-      <h2>{name}</h2>
-      <p>New Price: {new_price}</p>
-      <p>Old Price: <span className="old-price">{old_price}</span></p>
+      <h2 id='namecatalog'>{name}</h2>
     </div>
   );
 };
@@ -24,8 +22,7 @@ const NewCollection = () => {
             id={item.id}
             name={item.name}
             image={item.image}
-            new_price={`$${item.new_price}`} 
-            old_price={`$${item.old_price}`}
+          
           />
         ))}
       </div>
