@@ -6,9 +6,9 @@ import "./Navbar.css";
 const Navbar = () => {
   const [menu, setMenu] = useState("Home");
   const [userName, setUserName] = useState(null);
+  const [isDarkMode, setIsDarkMode] = useState(false);
   const { cartItems } = ShopCategoryContext();
 
- 
   const getInitials = (name) => {
     if (!name) return "";
     const nameParts = name.split(" ");
@@ -20,12 +20,29 @@ const Navbar = () => {
     if (storedUserName) {
       setUserName(storedUserName);
     }
+
+    const storedTheme = localStorage.getItem("theme");
+    if (storedTheme === "dark") {
+      setIsDarkMode(true);
+      document.body.classList.add("dark-mode");
+    }
   }, []);
 
   const userInitials = getInitials(userName);
 
+  const toggleTheme = () => {
+    setIsDarkMode((prev) => !prev);
+    if (isDarkMode) {
+      document.body.classList.remove("dark-mode");
+      localStorage.setItem("theme", "light");
+    } else {
+      document.body.classList.add("dark-mode");
+      localStorage.setItem("theme", "dark");
+    }
+  };
+
   return (
-    <div className="main-container">
+    <div className={`main-container ${isDarkMode ? "dark-navbar" : ""}`}>
       <div className="navbar-div">
         <div className="logo-div">
           <img src="logo_big.png" id="bag" alt="Logo" />
@@ -63,6 +80,21 @@ const Navbar = () => {
           </ul>
         </div>
         <div className="icons-login-div">
+          <button onClick={toggleTheme} className="theme-toggle-btn">
+            {isDarkMode ? (
+              <img
+                src="R (2).png"
+                alt="Light Mode"
+                style={{ width: "30px", height: "30px" }}
+              />
+            ) : (
+              <img
+                src="R (2).png"
+                alt="Dark Mode"
+                style={{ width: "30px", height: "30px" }}
+              />
+            )}
+          </button>
           <Link to="/Locations">
             <img className="icon" src="locationperson.svg" alt="loc" />
           </Link>

@@ -45,7 +45,7 @@ function Menfits() {
         className="collections"
         style={{
           marginTop: "60px",
-          height: "100%",
+          height: "90%",
           border: "none",
           fontSize: "7px",
           display: "flex",
@@ -68,7 +68,7 @@ function Menfits() {
               <p className="newtag">${item.new_price}</p>
               <p className="oldtag">${item.old_price}</p>
               <div className="rating">
-                {renderStars(item.rating || 0)} {/* Add rating if available */}
+                {renderStars(item.rating || 0)} 
               </div>
             </div>
           ))}

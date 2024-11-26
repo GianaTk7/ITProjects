@@ -195,3 +195,59 @@
   font-size: 1.2rem;
   text-transform: uppercase;
 }
+
+body {
+  background-color: white;
+  color: black;
+}
+
+.main-container {
+  background-color: white;
+  color: black;
+}
+
+.navbar-div {
+  background-color: white;
+}
+
+body.dark-mode {
+  background-color: #121212;
+  color: #f5f5f5;
+}
+
+.dark-navbar {
+  background-color: #1e1e1e;
+}
+
+.nav-menu li {
+  color: inherit;
+}
+
+.theme-toggle-btn {
+  margin-right: 15px;
+  padding: 5px 10px;
+  font-size: 10px;
+  background-color: transparent;
+  border: 1px solid #ccc;
+  color: inherit;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+body.dark-mode .theme-toggle-btn {
+  /* background-color: #333; */
+  /* border-color: #666; */
+  color: white;
+}
+
+.theme-toggle-btn img {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+}
+
+body.dark-mode .theme-toggle-btn:hover {
+  background-color: #444;
+  color: #ddd;
+}
+

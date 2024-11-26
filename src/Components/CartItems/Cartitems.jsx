@@ -26,7 +26,6 @@ const Cartitems = () => {
         <p className="product">Products</p>
         <p>Title</p>
         <p id="price">Price</p>
-        <p>Quantity</p>
         <p className="product">Remove</p>
       </div>
       <hr />

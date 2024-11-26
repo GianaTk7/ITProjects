@@ -19,7 +19,7 @@ const Checkout = ({ cartItems = [], totalAmount = 0 }) => {
           <h2>Shipping Details</h2>
           <form className="checkout-form">
             <label>Full Name</label>
-            <input type="text" placeholder="John Doe" required />
+            <input type="text" placeholder="type your name..." required />
 
             <label>Address</label>
             <input type="text" placeholder="123 Main St" required />
