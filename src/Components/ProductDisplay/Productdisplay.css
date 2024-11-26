@@ -8,6 +8,7 @@
 .Productdisplay {
     display: flex;
     margin: 60px auto;
+    margin-top: 580px;
     padding: 30px;
     max-width: 1000px;
     border-radius: 10px;

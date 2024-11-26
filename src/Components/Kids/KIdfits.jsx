@@ -14,8 +14,9 @@ function KIdfits() {
     
     return (
       <>
-      <div className="men-section">
-        <img src="kidsbanner.jpg" alt="kids" id='kidsbanner' />
+      <div className="kid-section">
+      <img src="/kidsbanner.jpg" alt="kids" />
+
       </div>
       <div className='collections'
         style={{
@@ -35,11 +36,11 @@ function KIdfits() {
             <div key={i} style={{ width: "23%" }}>
               <img 
                 src={item.image}
-                onClick={() => handleProductClick(item)} // Pass the item
+                onClick={() => handleProductClick(item)} 
                 alt=""
                 gap="40px"
               />
-              <h1>{item.name}</h1>
+              <h1 id='nametag'>{item.name}</h1>
               <p className="newtag">${item.new_price}</p>
               <p className="oldtag">${item.old_price}</p>
             </div>

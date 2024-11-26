@@ -8,7 +8,7 @@ function Newsletter() {
         <h1>Get Exclusive offers On Your Email</h1>
         <p>Subscribe to our newletter and stay updated </p>
         <div>
-            <input type='email' placeholder='Your Email id'/>
+            <input type='email' placeholder='Your Email'/>
             <Link  to='/Letters'>
             <button>Subscribe</button>
             </Link>

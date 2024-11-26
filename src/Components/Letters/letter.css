@@ -1,4 +1,4 @@
-/* General Reset */
+
 * {
     margin: 0;
     padding: 0;
@@ -9,11 +9,11 @@
     font-family: 'Arial', sans-serif;
     background-color: #f9f9f9;
   }
-  
-  /* Newsletter Container */
+
   .newsletter-container {
     max-width: 800px;
-    margin: 50px auto;
+    margin:  auto;
+    margin-top: 400px;
     padding: 30px;
     background-color: #ffffff;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
@@ -21,7 +21,6 @@
     text-align: center;
   }
   
-  /* Banner Section */
   .newsletter-banner h1 {
     font-size: 36px;
     color: #333333;

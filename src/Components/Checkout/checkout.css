@@ -8,8 +8,9 @@ body, h1, h2, input, button {
   .Checkout {
     padding: 2rem;
     max-width: 800px;
-    margin: 0 auto;
+    margin:  auto;
     color: #333;
+    margin-top: 1000px;
   }
   
   .Checkout h1 {

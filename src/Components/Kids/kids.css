@@ -1,17 +1,29 @@
-.collections img{
+.kid-section {
+    width: 100px;
+    margin-top: 1500px;
+}
+
+.collections img {
     width: 270px;
 }
 
-.oldtag{
-   font-size: 13px;
-   color: red;
-   text-decoration: line-through;
-}
-.newtag{
-    font-size: 17px;  
-}
-#kidsbanner{
-    width: 85%;
+.kid-section img {
+    width: 1200px;
     height: 400px;
     padding-left: 160px;
+}
+#nametag{
+    padding-left: 10px;
+}
+
+.oldtag {
+    font-size: 13px;
+    color: red;
+    text-decoration: line-through;
+    padding-left: 20px;
+}
+
+.newtag {
+    font-size: 17px;
+    padding-left: 20px;
 }
