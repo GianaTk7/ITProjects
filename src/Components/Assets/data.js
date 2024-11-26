@@ -13,19 +13,19 @@ let data_product = [
   },
   {
     id: 2,
-    name: "men cool short",
+    name: "winter coat",
     image: p4_img,
  
   },
   {
     id: 3,
-    name: "Vest",
+    name: "cargo matra pant",
     image: p51_img,
 
   },
   {
     id: 4,
-    name: "baby dress with a  red bow ",
+    name: "pink cargo baggy",
     image: p77_img,
     }
 ];

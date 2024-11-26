@@ -4,13 +4,14 @@
     box-sizing: border-box;
 }
 .Offers{
-    width: 65%;
-    height: 60vh;
-    margin: auto;
-    display: flex;
-    padding: 0px  140px;
-    margin-top: 80px;
-    background: linear-gradient(180deg, #fde1ff 0%, #e1ffea22 60%);
+        width: 65%;
+        height: 67vh;
+        margin: auto;
+        display: flex;
+        padding: 0px 140px;
+        margin-top: 80px;
+        background: linear-gradient(300deg, #394655 0%, #e1ffea22 60%);
+        box-sizing: border-box;
 }
 #pants{
     height: 400px;
