@@ -16,7 +16,6 @@ function Tracker() {
           />
         </Link>
       </div>
-
       <div className="track">
         <Link to ="/Trackdelivery">
         <img

@@ -11,7 +11,6 @@ function KIdfits() {
       console.log("Clicked Productdisplay:", item);
       nav("/Productdisplay")
     }
-    
     return (
       <>
       <div className="kid-section">
@@ -50,5 +49,4 @@ function KIdfits() {
     </>
     )
 }
-
 export default KIdfits
