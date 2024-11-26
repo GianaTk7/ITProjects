@@ -43,7 +43,7 @@ const Navbar = () => {
 
   return (
     <div className={`main-container ${isDarkMode ? "dark-navbar" : ""}`}>
-      <div className="navbar-div">
+      <div className={`navbar-div ${isDarkMode ? "dark-navbar" : ""}`}>
         <div className="logo-div">
           <img src="logo_big.png" id="bag" alt="Logo" />
           <h1 id="header">JM Store</h1>

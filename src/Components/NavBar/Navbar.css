@@ -105,7 +105,7 @@
   width: 24px;
   height: 24px;
   transition: filter 0.3s ease;
-  border: 1px solid #000;
+  /* border: 1px solid #000; */
 }
 
 .notifi {
@@ -126,7 +126,9 @@
 
 
 .icon:hover {
-  filter: invert(32%) sepia(86%) saturate(5489%) hue-rotate(340deg) brightness(100%) contrast(108%);
+  filter: invert(32%) sepia(86%) 
+  saturate(5489%) hue-rotate(340deg) 
+  brightness(100%) contrast(108%);
 }
 
 .icons-login-div button {
@@ -148,9 +150,6 @@
               0 0 20px 5px rgba(0, 204, 255, 0.5), 
               0 0 30px 7px rgba(0, 255, 127, 0.5);
 }
-
-
-
 .nav-shopping-count {
   width: 18px;
   height: 22px;
@@ -181,7 +180,7 @@
 }
 
 .user-initials {
-  background-color: #007bff; /* Example color */
+  background-color: #007bff; 
   color: white;
   font-weight: bold;
   padding: 0.5rem;
@@ -228,15 +227,12 @@ body.dark-mode {
   padding: 5px 10px;
   font-size: 10px;
   background-color: transparent;
-  border: 1px solid #ccc;
   color: inherit;
   cursor: pointer;
   transition: background-color 0.3s, color 0.3s;
 }
 
 body.dark-mode .theme-toggle-btn {
-  /* background-color: #333; */
-  /* border-color: #666; */
   color: white;
 }
 
@@ -250,4 +246,37 @@ body.dark-mode .theme-toggle-btn:hover {
   background-color: #444;
   color: #ddd;
 }
+.dark-navbar {
+  background-color: #1e1e1e; 
+  color: #f5f5f5;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5); 
+}
+
+.dark-navbar .nav-menu li {
+  color: #f5f5f5;
+}
+
+.dark-navbar .nav-menu li:hover {
+  color: #ff4141; 
+}
+
+.dark-navbar #highlight {
+  background-color: #333;
+  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
+}
+
+
+
+.dark-navbar .icon:hover {
+  filter: invert(90%) sepia(10%) saturate(500%)
+   hue-rotate(200deg)
+    brightness(80%) contrast(120%);
+}
+
+body.dark-mode .theme-toggle-btn {
+  background-color: #444;
+  border-color: #666;
+  color: #ddd;
+}
+
 
