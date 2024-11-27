@@ -2,22 +2,18 @@ import React from "react";
 import "./menfits.css";
 import { ShopCategoryContext } from "../contexthook/ShopCategoryContext";
 import { useNavigate } from "react-router-dom";
-
-
 const renderStars = (rating) => {
-  const fullStars = Math.floor(rating); // Full stars
-  const halfStars = rating % 1 >= 0.5 ? 1 : 0; // Half star if rating has 0.5
-  const emptyStars = 5 - fullStars - halfStars; // Remaining empty stars
+  const fullStars = Math.floor(rating); 
+  const halfStars = rating % 1 >= 0.5 ? 1 : 0; 
+  const emptyStars = 5 - fullStars - halfStars; 
 
   return (
     <>
-      {/* Render full stars */}
       {[...Array(fullStars)].map((_, index) => (
         <span key={`full-${index}`} className="star full-star">
-          &#9733; {/* Unicode for filled star */}
+          &#9733; 
         </span>
       ))}
-      {/* Render half star, if any */}
       {halfStars > 0 && (
         <span className="star half-star">&#9733;</span> 
       )}
