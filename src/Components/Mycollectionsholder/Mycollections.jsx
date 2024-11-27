@@ -76,19 +76,19 @@ function Mycollections() {
             </div>
           </div>
           <div className='my-fits'>
-            <div className='my-images' onClick={() => handleImageClick('handb.jpg', 'Butterfly Handbag', '⭐⭐⭐☆☆')}>
-              <img src='handb.jpg' alt='me' className='img2' />
+            <div className='my-images' onClick={() => handleImageClick('inmycollection.jpg', 'Butterfly Handbag', '⭐⭐⭐☆☆')}>
+              <img src='inmycollection.jpg' alt='me' className='img2' />
               <div className='images-discription'>
-                <h3>Butterfly Handbag</h3>
+                <h3>orange heat and fas goat</h3>
                 <p>⭐⭐⭐☆☆</p>
               </div>
             </div>
           </div>
           <div className='my-fits'>
-            <div className='my-images' onClick={() => handleImageClick('lastcolleimg.jpg', 'Ladies Outing Dress', '⭐⭐⭐⭐☆')}>
-              <img src='lastcolleimg.jpg' alt='me' className='img2' />
+            <div className='my-images' onClick={() => handleImageClick('inmycollections2', 'Ladies Outing Dress', '⭐⭐⭐⭐☆')}>
+              <img src='inmycollections2.jpg' alt='me' className='img2' />
               <div className='images-discription'>
-                <h3>Ladies Outing Dress</h3>
+                <h3>baggy cargo with a baggy vest</h3>
                 <p>⭐⭐⭐⭐☆</p>
               </div>
             </div>

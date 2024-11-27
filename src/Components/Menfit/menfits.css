@@ -71,3 +71,28 @@
     margin: auto;
     height: 400px;
 }
+.star {
+    font-size: 20px;
+    display: inline-block;
+  }
+  
+  .full-star {
+    color: gold;
+    background: gold;
+  }
+  
+  .half-star {
+    color: gold; 
+  }
+  
+  .empty-star {
+    color: lightgray;
+  }
+  .rating {
+    display: flex;
+    gap: 5px;
+    justify-content: start; 
+  }
+  
+  
+  

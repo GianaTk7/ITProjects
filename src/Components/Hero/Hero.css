@@ -84,6 +84,9 @@
     font-weight: 700;
     animation-delay: 2s
 }
+#collectione{
+    color: blue;
+}
 
 .hero-hand-icon {
     display: flex;

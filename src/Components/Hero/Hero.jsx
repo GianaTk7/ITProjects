@@ -12,7 +12,7 @@ const Hero = () =>{
             <p>new</p>
             <img src="hand.svg" alt="" id="hand" />
           </div>
-          <p>Collections</p>
+          <p id='collectione'>Collections</p>
           <p> For Everyone</p>
         </div>
         <div className="hero-button">
