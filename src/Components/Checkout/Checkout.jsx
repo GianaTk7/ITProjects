@@ -8,13 +8,14 @@ const Checkout = ({ cartItems = [], totalAmount = 0 }) => {
   const handlePlaceOrder = (e) => {
     e.preventDefault();
     alert("Order placed successfully!");
-    navigate("/order-confirmation");
+    navigate("/Logout"); // Navigate to the Logout page
   };
 
   return (
     <div className="Checkout">
       <h1>Checkout</h1>
       <div className="checkout-container">
+        {/* Shipping Details */}
         <div className="checkout-section">
           <h2>Shipping Details</h2>
           <form className="checkout-form">
@@ -35,18 +36,21 @@ const Checkout = ({ cartItems = [], totalAmount = 0 }) => {
           </form>
         </div>
 
+        {/* Order Summary */}
         <div className="checkout-section">
           <h2>Order Summary</h2>
           <div className="order-items">
             {cartItems && cartItems.length > 0 ? (
               cartItems.map((item) => (
                 <div key={item.id} className="order-item">
-                  <span>{item.name} x {item.quantity}</span>
+                  <span>
+                    {item.name} x {item.quantity}
+                  </span>
                   <span>${item.price * item.quantity}</span>
                 </div>
               ))
             ) : (
-              <div>No items in cart</div>
+              <div>3 items</div>
             )}
           </div>
           <div className="order-total">
@@ -55,6 +59,7 @@ const Checkout = ({ cartItems = [], totalAmount = 0 }) => {
           </div>
         </div>
 
+        {/* Payment Method */}
         <div className="checkout-section">
           <h2>Payment Method</h2>
           <div className="payment-method">
@@ -69,6 +74,8 @@ const Checkout = ({ cartItems = [], totalAmount = 0 }) => {
             </label>
           </div>
         </div>
+
+        {/* Checkout Button */}
         <button className="checkout-button" onClick={handlePlaceOrder}>
           Proceed to Checkout
         </button>

@@ -24,7 +24,7 @@ function Signup() {
     }
 
     try {
-      const response = await fetch("http://3.85.109.52:8000/signup", {
+      const response = await fetch("http://50.17.168.184:8000/signup", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

@@ -18,6 +18,7 @@ import Mycollections from './Components/Mycollectionsholder/Mycollections'
 import Trackdelivery from './Components/TrackDelivery/Trackdelivery'
 import Letters from './Components/Letters/Letters'
 import Checkout from './Components/Checkout/Checkout'
+import Logout from './Components/Logout/Logout.jsx'
 function App() {
   return (
     <div>
@@ -42,6 +43,7 @@ function App() {
             <Route path='/Fqas' element={<Fqas />} /> 
             <Route path='/Letters' element = {<Letters/>}/>
             <Route path='/Checkout' element={<Checkout />} /> 
+            <Route path ='/Logout' element ={< Logout/>}/>
           </Route>
         </Routes>
       </BrowserRouter>
